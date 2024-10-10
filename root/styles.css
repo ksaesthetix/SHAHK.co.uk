@@ -1,21 +1,20 @@
 :root {
-    --color-primary: #FDDA0D; /* Yellow #BA8E23 #FFE000 */
-    --color-primary-variant: #221F1F; /* Black */
-    --color-bg-1: #191919; /* Background color */
-    --color-bg-2: #2C2C2C; /* Slightly lighter background */
-    --color-bg-3: #333333; /* Even lighter background */
-    --color-accent-1: #DD6BCD; /* Gradient Pink */
-    --color-accent-2: #67DAFA; /* Gradient Blue */
-    --color-accent-3: #FCE00A; /* Gradient Yellow */
-    --color-grey-1: #E9EBEC; /* Sky (Light grey) */
-    --color-grey-2: #706F6F; /*  Grey (Darker grey) */
-    --color-dark-1: #0E0E0E; /* Almost black, for deep contrast */
-    --color-light: #EFEFEF; /*  Stone (Very light grey) */
-    --color-light-variant: #A1B4C4; /* A lighter variant of the light color */
+    --color-primary: #FDDA0D;
+    --color-primary-variant: #221F1F;
+    --color-bg-1: #191919;
+    --color-bg-2: #2C2C2C;
+    --color-bg-3: #333333;
+    --color-accent-1: #DD6BCD;
+    --color-accent-2: #67DAFA;
+    --color-accent-3: #FCE00A;
+    --color-grey-1: #E9EBEC;
+    --color-grey-2: #706F6F;
+    --color-dark-1: #0E0E0E;
+    --color-light: #EFEFEF;
+    --color-light-variant: #A1B4C4;
 
     --container-width-lg: 88%;
     --container-width-md: 92%;
-
     --transition: all 400ms ease;
 }
 
@@ -55,7 +54,7 @@ h2 {
 }
 
 a {
-    color: var(--color-primary); /* Gradient Yellow for links */
+    color: var(--color-primary);
     transition: var(--transition);
 }
 
@@ -76,8 +75,6 @@ img {
     height: auto;
 }
 
-/* NAV */
-
 nav {
     height: 5rem;
     width: 100vw;
@@ -87,16 +84,14 @@ nav {
     top: 0;
     left: 0;
     z-index: 99;
-    transition: background 0.3s, box-shadow 0.3s; /* Smooth transition for background and shadow */
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
-/* Adjusting the NAV LOGO size */
 .nav_logo {
-    width: auto; /* Allow width to auto to maintain aspect ratio */
-    height: 4rem; /* Set a specific height */
+    width: auto;
+    height: 4rem;
 }
 
-/* NAV class on scroll using javascript */
 .window-scrolled {
     background: var(--color-bg-1);
     border-bottom: 0.2rem solid var(--color-bg-3);
@@ -223,6 +218,8 @@ header {
     width: 85%;
 }
 
+/* Contact Button */
+
 .header_btn-md {
     display: none;
 }
@@ -259,7 +256,6 @@ header {
     left: 15rem;
 }
 
-/* style for contact buttons */
 .contact_btn {
     color: var(--color-primary);
     width: 10rem;
@@ -278,12 +274,6 @@ header {
     bottom: -3rem;
 }
 
-.header_button:hover {
-    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
-    transform: translateY(-1rem);
-    color: var(--color-bg-1);
-}
-
 .contact_btn i {
     font-size: 3.5rem;
     position: absolute;
@@ -297,7 +287,60 @@ header {
     justify-content: center;
 }
 
-.contact_btn p span {
-    position: absolute;
-    transform-origin: 0.3rem 5rem;
+/* Responsive Media Queries */
+
+/* For screens larger than 768px (tablets and desktops) */
+@media (min-width: 768px) {
+    .header_container {
+        grid-template-columns: 43% 53%;
+        gap: 4%;
+    }
+    .nav_links {
+        display: flex;
+        gap: 4rem;
+    }
+}
+
+/* For screens smaller than 768px (mobile) */
+@media (max-width: 768px) {
+    .header_container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .nav_links {
+        display: none;
+    }
+    .nav_toggle-btn {
+        display: block;
+    }
+    .header_right h1 {
+        font-size: 2.5rem;
+    }
+    .header_right p {
+        font-size: 1rem;
+    }
+    .header_btn-md {
+        display: block;
+    }
+    .header_image-lg, .header_image-sm {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* For very small screens (less than 480px) */
+@media (max-width: 480px) {
+    .header_right h1 {
+        font-size: 2rem;
+    }
+    .header_right p {
+        font-size: 0.9rem;
+    }
+    .header_btn-md {
+        font-size: 0.8rem;
+    }
+    .contact_btn {
+        width: 8rem;
+        height: 8rem;
+    }
 }
