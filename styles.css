@@ -1,0 +1,303 @@
+:root {
+    --color-primary: #FDDA0D; /* Yellow #BA8E23 #FFE000 */
+    --color-primary-variant: #221F1F; /* Black */
+    --color-bg-1: #191919; /* Background color */
+    --color-bg-2: #2C2C2C; /* Slightly lighter background */
+    --color-bg-3: #333333; /* Even lighter background */
+    --color-accent-1: #DD6BCD; /* Gradient Pink */
+    --color-accent-2: #67DAFA; /* Gradient Blue */
+    --color-accent-3: #FCE00A; /* Gradient Yellow */
+    --color-grey-1: #E9EBEC; /* Sky (Light grey) */
+    --color-grey-2: #706F6F; /*  Grey (Darker grey) */
+    --color-dark-1: #0E0E0E; /* Almost black, for deep contrast */
+    --color-light: #EFEFEF; /*  Stone (Very light grey) */
+    --color-light-variant: #A1B4C4; /* A lighter variant of the light color */
+
+    --container-width-lg: 88%;
+    --container-width-md: 92%;
+
+    --transition: all 400ms ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--color-bg-1);
+    color: var(--color-light);
+    line-height: 1.7;
+}
+
+h1, h2 {
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--color-primary);
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+a {
+    color: var(--color-primary); /* Gradient Yellow for links */
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-grey-2);
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+    max-width: 2160px;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+/* NAV */
+
+nav {
+    height: 5rem;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transition: background 0.3s, box-shadow 0.3s; /* Smooth transition for background and shadow */
+}
+
+/* Adjusting the NAV LOGO size */
+.nav_logo {
+    width: auto; /* Allow width to auto to maintain aspect ratio */
+    height: 4rem; /* Set a specific height */
+}
+
+/* NAV class on scroll using javascript */
+.window-scrolled {
+    background: var(--color-bg-1);
+    border-bottom: 0.2rem solid var(--color-bg-3);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.nav_container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav_toggle-btn {
+    display: none;
+}
+
+.nav_logo {
+    width: 7.5rem;
+}
+
+.nav_links {
+    display: flex;
+    gap: 4rem;
+}
+
+.nav_socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav_socials a {
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    border-radius: 0.5rem;
+    color: var(--color-bg-1);
+    display: grid;
+    place-items: center;
+}
+
+.nav_socials a:hover {
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+/* Header */
+
+header {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    background: linear-gradient(var(--color-bg-3), var(--color-bg-1));
+    overflow: hidden;
+}
+
+.header_container {
+    display: grid;
+    grid-template-columns: 43% 53%;
+    gap: 4%;
+    margin-top: 10rem;
+    position: relative;
+}
+
+.header_image-bg {
+    background: var(--color-bg-3);
+    height: 22rem;
+    width: 16rem;
+    position: absolute;
+}
+
+.header_image-lg {
+    height: 29rem;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    filter: saturate(0) brightness(0.3);
+}
+
+.header_image-sm {
+    width: 28rem;
+    height: 28rem;
+    overflow: hidden;
+    position: absolute;
+    left: 6rem;
+    top: 6rem;
+    transition: var(--transition);
+}
+
+.header_left:hover .header_image-sm {
+    opacity: 0;
+}
+
+.header_left:hover .header_image-lg {
+    filter: saturate(1) brightness(1);
+    border: 1rem solid var(--color-bg-3);
+    top: 0;
+    left: 0;
+}
+
+.header_head {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.empty {
+    height: 3.5rem;
+    width: 18rem;
+    background: var(--color-bg-2);
+    border-radius: calc(3.5 / 2);
+    margin-bottom: 3.5rem;
+    box-shadow: inset 0 1rem 1rem rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-primary-variant);
+}
+
+.header_tag {
+    color: var(--color-primary);
+}
+
+.header_right p {
+    margin-top: 2rem;
+    width: 85%;
+}
+
+.header_btn-md {
+    display: none;
+}
+
+.header_frames {
+    position: absolute;
+    top: 92vh;
+    right: 46.2rem;
+    transition: var(--transition);
+}
+
+.header_frame {
+    width: 14rem;
+    border: 0.4rem solid var(--color-bg-3);
+    box-shadow: 0 0 4rem rgba(0, 0, 0, 0.5);
+    position: absolute;
+    transform: rotate(-10deg);
+    transform-origin: bottom left;
+    transition: var(--transition);
+}
+
+.header_frame:nth-child(2) {
+    transform: rotate(20deg);
+    top: -2rem;
+    left: 2rem;
+}
+
+.header_frames:hover .header_frame {
+    transform: rotate(0);
+}
+
+.header_frames:hover .header_frame:nth-child(2) {
+    top: 0;
+    left: 15rem;
+}
+
+/* style for contact buttons */
+.contact_btn {
+    color: var(--color-primary);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.header_btn {
+    background: linear-gradient(-30deg, var(--color-primary-variant), var(--color-primary), var(--color-primary-variant));
+    position: absolute;
+    right: 6%;
+    bottom: -3rem;
+}
+
+.header_button:hover {
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
+    transform: translateY(-1rem);
+    color: var(--color-bg-1);
+}
+
+.contact_btn i {
+    font-size: 3.5rem;
+    position: absolute;
+}
+
+.contact_btn p {
+    font-size: 1rem;
+    font-weight: 600;
+    width: 10rem;
+    height: 10rem;
+    justify-content: center;
+}
+
+.contact_btn p span {
+    position: absolute;
+    transform-origin: 0.3rem 5rem;
+}
