@@ -1,4 +1,5 @@
 :root {
+    /* Define global CSS variables for colors */
     --color-primary: #FDDA0D;
     --color-primary-variant: #221F1F;
     --color-bg-1: #191919;
@@ -11,29 +12,39 @@
     --color-grey-2: #706F6F;
     --color-dark-1: #0E0E0E;
     --color-light: #EFEFEF;
-    --color-light-variant: #A1B4C4
-    
+    --color-light-variant: #A1B4C4;
 }
 
-*{
+* {
+    /* Reset padding and margin for all elements */
     padding: 0;
     margin: 0;
-    font-family:'Overpass',sans-serif;
+    /* Set default font */
+    font-family: 'Overpass', sans-serif;
+    /* Ensure consistent box sizing */
     box-sizing: border-box;
 }
-body{
+
+body {
+    /* Set full width and height for the body */
     width: 100%;
     height: 100vh;
+    /* Prevent vertical scrolling */
     overflow: hidden;
+    /* Set background color */
     background-color: var(--color-bg-2);
 }
-nav{
+
+nav {
+    /* Make navigation bar full width and set height */
     width: 100%;
     height: 10vh;
+    /* Stick the navbar to the top */
     position: sticky;
 }
 
-.nav-container{
+.nav-container {
+    /* Set up flexible layout for nav content */
     width: 100%;
     height: 100%;
     display: flex;
@@ -41,57 +52,73 @@ nav{
     align-items: center;
 }
 
-.nav-container .logo{
-    width: 100px; 
-    height: auto;
+.nav-container .logo {
+    /* Define dimensions for the logo container */
+    width: 140px;
+    height: 50px;
 }
+
 .nav-container .logo img {
-    width: 200px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    border: none; /* Temporary visual check */
-}    
-.nav-container .logo span{
+    /* Set logo image dimensions and maintain aspect ratio */
+    width: 200px;
+    height: 50px;
+    border: none; /* Remove any border */
+}
+
+.nav-container .logo span {
+    /* Style the logo text */
     font-size: 2rem;
     font-weight: bold;
     color: var(--color-primary);
 }
-.hamburg,.cancel{
+
+.hamburg, .cancel {
+    /* Style for hamburger menu and cancel icon */
     cursor: pointer;
     position: absolute;
     right: 15px;
     top: 10px;
     color: var(--color-light);
-    font-size: clamp(2.5rem,0.5rem + 5vw,3rem);
-    display: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+    display: none; /* Initially hidden */
 }
-.nav-container .links{
+
+.nav-container .links {
+    /* Display links in the navigation */
     display: flex;
 }
-.nav-container .links a{
-    font-size: 1.2rem;
+
+.nav-container .links a {
+    /* Style for nav links */
+    font-size: 1.3rem;
     color: var(--color-primary);
     margin: 0 20px;
     text-decoration: none;
     font-weight: 550;
     transition: 0.3s linear;
 }
-.nav-container .links a:hover{
+
+.nav-container .links a:hover {
+    /* Style for hover effect on nav links */
     color: var(--color-grey-2);
     border-bottom: 2px solid var(--color-primary);
 }
-.dropdown{
+
+.dropdown {
+    /* Style dropdown menu */
     z-index: 10;
     position: absolute;
     top: 0;
-    transform: translateY(-400px);
+    transform: translateY(-400px); /* Initially hidden off-screen */
     width: 100%;
     height: auto;
-    backdrop-filter: blur(5px)brightness(40%);
-    box-shadow:0 0 20px var(--color-dark-1);
+    backdrop-filter: blur(5px) brightness(40%);
+    box-shadow: 0 0 20px var(--color-dark-1);
     transition: 0.2 linear;
-
 }
-.dropdown a{
+
+.dropdown a {
+    /* Style for dropdown links */
     display: flex;
     color: var(--color-grey-1);
     text-decoration: none;
@@ -100,76 +127,101 @@ nav{
     align-items: center;
     transition: 0.3 linear;
 }
-.dropdown a:hover{
+
+.dropdown a:hover {
+    /* Hover effect for dropdown links */
     background-color: var(--color-grey-2);
 }
-section{
+
+section {
+    /* Full width and height for sections */
     width: 100%;
     height: 90vh;
 }
-.main-container{
+
+.main-container {
+    /* Flexbox layout for main container */
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
+
 .main-container .image {
-    width: 20vw; /* Use viewport width to make the image responsive */
-    height: 20vw; /* Ensure the height is the same as the width to maintain a circle */
-    max-width: 300px; /* Optionally set a maximum size */
-    max-height: 300px; /* Ensure max height stays consistent */
-    min-width: 150px; /* Optionally set a minimum size */
-    min-height: 150px; /* Ensure min height stays consistent */
+    /* Style for circular image container */
+    width: 20vw;
+    height: 20vw;
+    max-width: 300px;
+    max-height: 300px;
+    min-width: 150px;
+    min-height: 150px;
     overflow: hidden;
-    border-radius: 50%; /* Keep the container round */
+    border-radius: 50%; /* Circle shape */
 }
 
 .main-container .image img {
+    /* Style for images within the circular container */
     width: 100%;
     height: 100%;
-    border: 5px solid var(--color-primary); /* Keeps the border */
-    border-radius: 50%; /* Keeps the image round */
-    object-fit: cover; /* Makes sure the image scales properly */
+    border: 5px solid var(--color-primary);
+    border-radius: 50%; /* Keep image circular */
+    object-fit: cover; /* Make sure image scales properly */
 }
-.main-container .image img:hover{
+
+.main-container .image img:hover {
+    /* Animate image on hover */
     animation: animate 1.5s ease-in-out infinite;
 }
-@keyframes animate{
-    0%{
+
+@keyframes animate {
+    /* Keyframes for hover animation on images */
+    0% {
         scale: 1;
     }
-    50%{
-        scale:1.05;
+    50% {
+        scale: 1.05;
     }
-    100%{
+    100% {
         scale: 1;
     }
 }
-.main-container .content{
+
+.main-container .content {
+    /* Style for content container */
     color: var(--color-grey-1);
     width: 40%;
     min-height: 100px;
 }
-.content h1{
-    font-size: clamp(1rem,1rem + 5vw,1.8rem);
+
+.content h1 {
+    /* Style for main heading */
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
 }
-.content h1 span{
+
+.content h1 span {
+    /* Style for highlighted part of the heading */
     font-weight: 700;
     text-shadow: 0 0 10px var(--color-bg-2);
     color: var(--color-primary);
 }
-.typing-text{
-    font-size: clamp(1rem,1rem + 5vw,2.5rem);
+
+.typing-text {
+    /* Style for typing effect text */
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
     font-weight: 700;
     position: relative;
 }
-.typing-text span::before{
+
+.typing-text span::before {
+    /* Animated words that change */
     content: "";
     color: var(--color-primary);
     animation: words 20s infinite;
 }
-.typing-text span::after{
+
+.typing-text span::after {
+    /* Cursor effect for typing animation */
     content: "";
     background-color: var(--color-bg-2);
     position: absolute;
@@ -179,33 +231,41 @@ section{
     right: -8;
     animation: cursor 0.5s infinite;
 }
-@keyframes cursor{
-    to{
+
+@keyframes cursor {
+    /* Keyframes for blinking cursor */
+    to {
         border-left: 3px solid var(--color-grey-2);
     }
 }
-@keyframes words{
-    0%, 20%{
+
+@keyframes words {
+    /* Keyframes for changing words */
+    0%, 20% {
         content: "Photographer";
     }
-    21%,40%{
+    21%, 40% {
         content: "Programmer";
     }
-    41%,60%{
-        content: "App Devloper";
+    41%, 60% {
+        content: "App Developer";
     }
-    61%,80%{
+    61%, 80% {
         content: "Web Designer";
     }
-    81%,100%{
+    81%, 100% {
         content: "Business Specialist";
     }
 }
-.content p{
+
+.content p {
+    /* Style for paragraph in content */
     font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
     margin: 10px 0;
 }
-.social-links i{
+
+.social-links i {
+    /* Style for social media icons */
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -213,19 +273,23 @@ section{
     height: 3rem;
     background-color: transparent;
     border: 0.2rem solid var(--color-primary);
-    border-radius: 50%;
+    border-radius: 50%; /* Circle icons */
     color: var(--color-primary);
     margin: 5px 15px 5px 0;
     font-size: 1.5rem;
     transition: 0.5s linear;
 }
-.social-links i:hover{
-    scale:1.3;
+
+.social-links i:hover {
+    /* Hover effect for social icons */
+    scale: 1.3;
     filter: drop-shadow(0 0 10px var(--color-accent-3));
     background-color: var(--color-accent-3);
     color: var(--color-grey-1);
 }
-.content button{
+
+.content button {
+    /* Style for buttons */
     width: 50%;
     height: 6vh;
     margin: 30px;
@@ -238,58 +302,71 @@ section{
     border-radius: 10px;
     transition: 0.2s linear;
 }
-.content button:hover{
+
+.content button:hover {
+    /* Hover effect for buttons */
     scale: 1.1;
     color: var(--color-grey-1);
     border: 2px solid var(--color-primary);
     box-shadow: 0 0 40px 5px var(--color-primary);
 }
 
-@media (max-width:884px){
-    nav .logo{
+@media (max-width: 768px) {
+    /* Responsive styles for smaller screens */
+    nav .logo {
         position: absolute;
         top: 16px;
         left: 15px;
         font-size: 1.5rem;
     }
-    .main-container{
-        display: flex;
-        flex-direction: column;
+
+    .main-container {
+        flex-direction: column; /* Stack content vertically */
     }
-    .nav-container .links{
-        display: none;
+
+    .nav-container .links {
+        display: none; /* Hide links */
     }
-    .hamburg .cancel{
-        display: block;
+
+    .hamburg .cancel {
+        display: block; /* Show hamburger menu */
     }
-    .main-container .content{
+
+    .main-container .content {
         width: 80%;
         margin-top: -40px;
     }
-    .social-links i{
+
+    .social-links i {
         width: 2.5rem;
         height: 2.5rem;
         font-size: 1.5rem;
     }
-    .typing-text{
+
+    .typing-text {
         font-size: 2rem;
     }
-    .main-container .image{
+
+    .main-container .image {
         z-index: -1;
         width: 50%;
         height: 60%;
     }
 }
 
-@media (max-width:440px){
-    .main-container .image{
+@media (max-width: 440px) {
+    /* Responsive styles for even smaller screens */
+    .main-container .image {
         width: 70%;
         height: 60%;
     }
-    .main-container .content{
+
+    .main-container .content {
         width: 80%;
     }
-    .main-container button{
+
+    .main-container button {
         margin-top: 15px;
     }
 }
+
