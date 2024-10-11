@@ -204,7 +204,7 @@ section .content {
 
 .image img {
     margin-top: 40px;
-    width: 500px;
+    width: 100%;
     border: 2px solid var(--color-primary); /* Add this line for the border */
     border-radius: 5px; /* Optional: Add rounded corners */
 }
@@ -247,6 +247,7 @@ section .content {
     .main-content p {
         text-align: center;
     }
+    
 }
 
 /* Typing Effect Styles */
@@ -481,6 +482,7 @@ button:hover {
 .project-item:hover {
     transform: scale(1.05); /* Scale up project item on hover */
 }
+
 #photography-services,
 #coding-services {
     width: 100%;
