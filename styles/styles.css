@@ -151,17 +151,23 @@ section .content {
 }
 
 .main-content h1 {
-    font-size: clamp(2rem, 1rem + 5vw, 6rem);
+    font-size: clamp(2rem, 1rem + 5vw, 4rem);
+    color: var(--color-light);
 }
 
 .main-content span {
-    font-size: clamp(2rem, 1rem + 5vw, 6rem);
+    font-size: clamp(2rem, 1rem + 5vw, 4rem);
     font-weight: 700;
     color: var(--color-primary);
 }
 
 .main-content p {
     font-size: clamp(1rem, 1rem + 5vw, 1.2rem);
+    color: var(--color-light);
+}
+.main-content h2 {
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    color: var(--color-light);
 }
 
 .main-content .buttons {
@@ -243,32 +249,33 @@ section .content {
 
 /* Typing Effect Styles */
 .typing-text {
-    /* Style for typing effect text */
     font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
-    font-weight: 700;
     position: relative;
 }
 
 .typing-text span::before {
-    /* Animated words that change */
     content: "";
-    color: var(--color-primary);
-    animation: words 20s infinite;
+    display: inline-block; /* Make span an inline block */
+    color: var(--color-primary); /* Set color of the words */
+    animation: words 20s infinite; /* Use original keyframes for words */
 }
 
 .typing-text span::after {
-    /* Cursor effect for typing animation */
     content: "";
     background-color: var(--color-bg-2);
     position: absolute;
-    width: calc(100% + 8px);
+    width: calc(100% + 8px); /* Width of the cursor */
     height: 100%;
-    border-left: 3px solid var(--color-bg-2);
-    right: -8px; /* Added 'px' to specify the unit */
-    animation: cursor 0.8s step-end infinite; /* Add cursor blinking */
+    border-left: 3px solid var(--color-grey-2);
+    right: -8;
+    animation: cursor 0.5s infinite; /* Cursor blinking */
 }
 
 @keyframes cursor {
+    /* Keyframes for blinking cursor */
+    50% {
+        border-color: transparent;
+    }
     /* Keyframes for blinking cursor */
     to {
         border-left: 3px solid var(--color-grey-2);
@@ -276,20 +283,19 @@ section .content {
 }
 
 @keyframes words {
-    /* Keyframes for changing words */
     0%, 20% {
-        content: "Photographer";
+        content: "Photographer"; /* Word to show */
     }
     21%, 40% {
-        content: "Programmer";
+        content: "Programmer"; /* Word to show */
     }
     41%, 60% {
-        content: "App Developer";
+        content: "App Developer"; /* Word to show */
     }
     61%, 80% {
-        content: "Web Designer";
+        content: "Web Designer"; /* Word to show */
     }
     81%, 100% {
-        content: "Business Specialist";
+        content: "Business Specialist"; /* Word to show */
     }
 }
