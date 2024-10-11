@@ -305,7 +305,7 @@ section .content {
 #contact {
     width: 100%;
     padding: 50px 0;
-    background-color: var(--color-bg-1); /* Background for the contact section */
+    background-color: var(--color-bg-2); /* Background for the contact section */
 }
 
 #contact h2 {
