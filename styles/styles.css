@@ -23,7 +23,7 @@
 }
 
 body {
-    background-color: var(--color-bg-2);
+    background-color: var(--color-bg-3);
     width: 100%;
     height: auto;
     overflow: auto;
@@ -46,7 +46,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--color-bg-3);
+    background-color: var(--color-bg-2);
 }
 
 .nav-container .logo img {
