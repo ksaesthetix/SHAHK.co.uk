@@ -15,23 +15,22 @@
     --color-light-variant: #A1B4C4;
 }
 
-
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Overpass', sans-serif;
     box-sizing: border-box;
 }
 
-body{
-    background-color:var(--color-bg-2);
+body {
+    background-color: var(--color-bg-2);
     width: 100%;
     height: auto;
-    overflow:hidden ;
+    overflow: hidden;
     position: relative;
 }
 
-nav{
+nav {
     z-index: 4;
     position: sticky;
     top: 0;
@@ -40,7 +39,7 @@ nav{
     backdrop-filter: brightness(100%);
 }
 
-.nav-container{
+.nav-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -48,12 +47,12 @@ nav{
     align-items: center;
 }
 
-.nav-container .logo img{
+.nav-container .logo img {
     width: 140px;
     height: 50px;
 }
 
-.nav-container .links a{
+.nav-container .links a {
     font-size: 1.3rem;
     color: var(--color-primary);
     text-decoration: none;
@@ -61,17 +60,17 @@ nav{
     transition: 0.3s linear;
 }
 
-.nav-container .links a:hover{
+.nav-container .links a:hover {
     color: var(--color-grey-2);
     border-bottom: 2px solid var(--color-primary);
     text-shadow: 1px 1px var(--color-primary);
 }
 
-nav button{
+nav button {
     width: 150px;
     height: 40px;
-    border-radius:20px;
-    background-color:var(--color-primary);
+    border-radius: 20px;
+    background-color: var(--color-primary);
     color: var(--color-bg-3);
     font-size: 1.2rem;
     transition: 0.3s linear;
@@ -81,13 +80,13 @@ nav button{
     outline: none;
 }
 
-nav button:hover{
-    background-color:white;
+nav button:hover {
+    background-color: white;
     color: var(--color-bg-3);
-    border:2px solid var(--color-primary);
+    border: 2px solid var(--color-primary);
 }
 
-nav svg{
+nav svg {
     position: absolute;
     right: 20px;
     top: 15px;
@@ -95,7 +94,7 @@ nav svg{
     display: none;
 }
 
-nav .dropmenu{
+nav .dropmenu {
     position: absolute;
     top: 0;
     backdrop-filter: blur(2px);
@@ -109,7 +108,7 @@ nav .dropmenu{
     transition: 0.3s linear;
 }
 
-.dropmenu a{
+.dropmenu a {
     font-size: 1.4rem;
     text-align: center;
     width: 100%;
@@ -119,24 +118,24 @@ nav .dropmenu{
     transition: 0.3s linear;
 }
 
-.dropmenu a:hover{
+.dropmenu a:hover {
     background-color: var(--color-grey-2);
     color: var(--color-grey-1);
 }
 
-.dropmenu button{
+.dropmenu button {
     width: 100%;
     height: 45px;
 }
 
 /* Landing Page  */
 
-section{
+section {
     width: 100%;
     height: 100vh;
 }
 
-section .content{
+section .content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -144,28 +143,28 @@ section .content{
     align-items: center;
 }
 
-.content .main-content{
+.content .main-content {
     width: 50%;
     display: flex;
     flex-direction: column;
     margin: 0 10%;
 }
 
-.main-content h1{
+.main-content h1 {
     font-size: clamp(2rem, 1rem + 5vw, 6rem);
 }
 
-.main-content span{
+.main-content span {
     font-size: clamp(2rem, 1rem + 5vw, 6rem);
     font-weight: 700;
     color: var(--color-primary);
 }
 
-.main-content p{
+.main-content p {
     font-size: clamp(1rem, 1rem + 5vw, 1.2rem);
 }
 
-.main-content .buttons{
+.main-content .buttons {
     width: 70%;
     margin: 5%;
     min-height: 5.5vh;
@@ -173,7 +172,7 @@ section .content{
     justify-content: space-around;
 }
 
-.main-content .buttons button{
+.main-content .buttons button {
     width: 160px;
     margin: 0 10px;
     border-radius: 20px;
@@ -186,60 +185,111 @@ section .content{
     transform: 0.2s linear;
 }
 
-.buttons button:hover{
+.buttons button:hover {
     box-shadow: 2px 2px 30px var(--color-primary);
 }
 
-.content .image{
+.content .image {
     width: 50%;
     display: flex;
     margin-top: 5px;
-    justify-content: center;
 }
 
-.image img{
+.image img {
     margin-top: 40px;
     width: 500px;
     filter: drop-shadow(0 0 400px var(--color-primary));
 }
 
-@media (max-width:768px){
-    .links{
+@media (max-width: 768px) {
+    .links {
         display: none;
     }
 
-    .nav-container button{
+    .nav-container button {
         display: none;
     }
 
-    nav svg{
+    nav svg {
         display: block;
     }
 
-    .nav-container .logo{
+    .nav-container .logo {
         position: absolute;
         left: 10px;
     }
 
-    .content{
+    .content {
         margin-top: -100px;
         display: flex;
         width: 100%;
         flex-direction: column-reverse;
     }
 
-    .image img{
+    .image img {
         width: 120%;
     }
 
-    .content .main-content{
+    .content .main-content {
         max-width: 350px;
         align-items: center;
         width: 100%;
     }
 
-    .main-content p{
+    .main-content p {
         text-align: center;
     }
+}
 
+/* Typing Effect Styles */
+.typing-text {
+    /* Style for typing effect text */
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 700;
+    position: relative;
+}
+
+.typing-text span::before {
+    /* Animated words that change */
+    content: "";
+    color: var(--color-primary);
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    /* Cursor effect for typing animation */
+    content: "";
+    background-color: var(--color-bg-2);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--color-bg-2);
+    right: -8px; /* Added 'px' to specify the unit */
+    animation: cursor 0.8s step-end infinite; /* Add cursor blinking */
+}
+
+@keyframes cursor {
+    /* Keyframes for blinking cursor */
+    to {
+        border-left: 3px solid var(--color-grey-2);
+    }
+}
+
+@keyframes words {
+    /* Keyframes for changing words */
+    0%, 20% {
+        content: "Photographer";
+    }
+    21%, 40% {
+        content: "Programmer";
+    }
+    41%, 60% {
+        content: "App Developer";
+    }
+    61%, 80% {
+        content: "Web Designer";
+    }
+    81%, 100% {
+        content: "Business Specialist";
+    }
 }
