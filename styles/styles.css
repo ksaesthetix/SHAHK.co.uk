@@ -48,7 +48,7 @@ nav {
 }
 
 .nav-container .logo img {
-    width: 300px;
+    width: auto;
     height: 4rem;
 }
 
@@ -299,3 +299,77 @@ section .content {
         content: "Business Specialist"; /* Word to show */
     }
 }
+/* Contact Form Styles */
+#contact {
+    width: 100%;
+    padding: 50px 0;
+    background-color: var(--color-bg-1); /* Background for the contact section */
+}
+
+#contact h2 {
+    font-size: clamp(2rem, 1rem + 5vw, 4rem);
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px; /* Set max width for the form */
+    margin: 0 auto;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px; /* Space between form fields */
+}
+
+.form-group label {
+    display: block; /* Block to ensure labels are above the inputs */
+    font-size: 1.1rem;
+    color: var(--color-grey-1);
+    margin-bottom: 5px; /* Space below label */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Full width */
+    padding: 10px;
+    border: 2px solid var(--color-grey-1);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-primary); /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.form-group textarea {
+    height: 150px; /* Set a height for the textarea */
+    resize: none; /* Disable resizing */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--color-primary);
+    color: var(--color-bg-2);
+    font-size: 1.2rem;
+    transition: 0.3s linear;
+    font-weight: 700;
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    background-color: white; /* Change button color on hover */
+    color: var(--color-bg-3);
+    border: 2px solid var(--color-primary);
+}
+
