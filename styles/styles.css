@@ -374,4 +374,40 @@ button:hover {
     color: var(--color-bg-3);
     border: 2px solid var(--color-primary);
 }
+#portfolio {
+    width: 100%;
+    padding: 50px 0;
+    background-color: var(--color-bg-2);
+}
+
+#portfolio h2 {
+    font-size: clamp(2rem, 1rem + 5vw, 4rem);
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 30px;
+}
+
+.portfolio-container {
+    max-width: 1200px; /* Set max width for the portfolio */
+    margin: 0 auto; /* Center the portfolio */
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between photos */
+    padding: 0 10%; /* Side padding */
+}
+
+.portfolio-item img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid var(--color-primary); /* Border around images */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05); /* Scale up image on hover */
+}
 
