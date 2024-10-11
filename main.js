@@ -34,4 +34,3 @@ navToggleClose.addEventListener('click', () => {
     navToggleClose.style.display = 'none';
     navToggleOpen.style.display = 'block';
 });
-
