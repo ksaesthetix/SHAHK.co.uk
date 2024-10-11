@@ -15,36 +15,32 @@
     --color-light-variant: #A1B4C4;
 }
 
-* {
-    /* Reset padding and margin for all elements */
+
+*{
     padding: 0;
     margin: 0;
-    /* Set default font */
     font-family: 'Overpass', sans-serif;
-    /* Ensure consistent box sizing */
     box-sizing: border-box;
 }
 
-body {
-    /* Set full width and height for the body */
+body{
+    background-color:var(--color-bg-2);
     width: 100%;
-    height: 100vh;
-    /* Prevent vertical scrolling */
-    overflow: hidden;
-    /* Set background color */
-    background-color: var(--color-bg-2);
+    height: auto;
+    overflow:hidden ;
+    position: relative;
 }
 
-nav {
-    /* Make navigation bar full width and set height */
+nav{
+    z-index: 4;
+    position: sticky;
+    top: 0;
     width: 100%;
     height: 10vh;
-    /* Stick the navbar to the top */
-    position: sticky;
+    backdrop-filter: brightness(100%);
 }
 
-.nav-container {
-    /* Set up flexible layout for nav content */
+.nav-container{
     width: 100%;
     height: 100%;
     display: flex;
@@ -52,56 +48,43 @@ nav {
     align-items: center;
 }
 
-.nav-container .logo {
-    /* Define dimensions for the logo container */
+.nav-container .logo img{
     width: 140px;
     height: 50px;
 }
 
-.nav-container .logo img {
-    /* Set logo image dimensions and maintain aspect ratio */
-    width: 200px;
-    height: 50px;
-    border: none; /* Remove any border */
-}
-
-.nav-container .logo span {
-    /* Style the logo text */
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--color-primary);
-}
-
-.hamburg, .cancel {
-    /* Style for hamburger menu and cancel icon */
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    color: var(--color-light);
-    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
-    display: none; /* Initially hidden */
-}
-
-.nav-container .links {
-    /* Display links in the navigation */
-    display: flex;
-}
-
-.nav-container .links a {
-    /* Style for nav links */
+.nav-container .links a{
     font-size: 1.3rem;
     color: var(--color-primary);
-    margin: 0 20px;
     text-decoration: none;
-    font-weight: 550;
+    margin: 0 20px;
     transition: 0.3s linear;
 }
 
-.nav-container .links a:hover {
-    /* Style for hover effect on nav links */
+.nav-container .links a:hover{
     color: var(--color-grey-2);
     border-bottom: 2px solid var(--color-primary);
+    text-shadow: 1px 1px var(--color-primary);
+}
+
+nav button{
+    width: 150px;
+    height: 40px;
+    border-radius:20px;
+    background-color:var(--color-primary);
+    color: var(--color-bg-3);
+    font-size: 1.2rem;
+    transition: 0.3s linear;
+    font-weight: 700;
+    box-shadow: 1px 1px 10px var(--color-primary);
+    border: none;
+    outline: none;
+}
+
+nav button:hover{
+    background-color:white;
+    color: var(--color-bg-3);
+    border:2px solid var(--color-primary);
 }
 
 nav svg{
@@ -112,48 +95,48 @@ nav svg{
     display: none;
 }
 
-nav .dropdown {
-    /* Style dropdown menu */
+nav .dropmenu{
     position: absolute;
     top: 0;
-    transform: translateY(-300px); /* Initially hidden off-screen */
+    backdrop-filter: blur(2px);
     width: 100%;
     height: auto;
-    backdrop-filter: blur(2px);
-    box-shadow: 0 0 20px var(--color-dark-1);
+    transform: translateY(-300px);
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: 0.2 linear;
+    transition: 0.3s linear;
 }
 
-.dropdown a {
-    /* Style for dropdown links */
+.dropmenu a{
     font-size: 1.4rem;
-    display: flex;
-    color: var(--color-grey-1);
-    text-decoration: none;
-    padding: 10px 0;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3 linear;
     text-align: center;
-    width: 100%;   
-}
-
-.dropdown a:hover {
-    /* Hover effect for dropdown links */
-    background-color: var(--color-grey-2);
-}
-
-section {
-    /* Full width and height for sections */
     width: 100%;
-    height: 90vh;
+    color: var(--color-primary);
+    padding: 10px 0;
+    text-decoration: none;
+    transition: 0.3s linear;
 }
 
-.main-container {
-    /* Flexbox layout for main container */
+.dropmenu a:hover{
+    background-color: var(--color-grey-2);
+    color: var(--color-grey-1);
+}
+
+.dropmenu button{
+    width: 100%;
+    height: 45px;
+}
+
+/* Landing Page  */
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+section .content{
     width: 100%;
     height: 100%;
     display: flex;
@@ -161,228 +144,102 @@ section {
     align-items: center;
 }
 
-.main-container .image {
-    /* Style for circular image container */
-    width: 20vw;
-    height: 20vw;
-    max-width: 300px;
-    max-height: 300px;
-    min-width: 150px;
-    min-height: 150px;
-    overflow: hidden;
-    border-radius: 50%; /* Circle shape */
-}
-
-.main-container .image img {
-    /* Style for images within the circular container */
-    width: 100%;
-    height: 100%;
-    border: 5px solid var(--color-primary);
-    border-radius: 50%; /* Keep image circular */
-    object-fit: cover; /* Make sure image scales properly */
-}
-
-.main-container .image img:hover {
-    /* Animate image on hover */
-    animation: animate 1.5s ease-in-out infinite;
-}
-
-@keyframes animate {
-    /* Keyframes for hover animation on images */
-    0% {
-        scale: 1;
-    }
-    50% {
-        scale: 1.05;
-    }
-    100% {
-        scale: 1;
-    }
-}
-
-.main-container .content {
-    /* Style for content container */
-    color: var(--color-grey-1);
-    width: 40%;
-    min-height: 100px;
-}
-
-.content h1 {
-    /* Style for main heading */
-    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
-}
-
-.content h1 span {
-    /* Style for highlighted part of the heading */
-    font-weight: 700;
-    text-shadow: 0 0 10px var(--color-bg-2);
-    color: var(--color-primary);
-}
-
-.typing-text {
-    /* Style for typing effect text */
-    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
-    font-weight: 700;
-    position: relative;
-}
-
-.typing-text span::before {
-    /* Animated words that change */
-    content: "";
-    color: var(--color-primary);
-    animation: words 20s infinite;
-}
-
-.typing-text span::after {
-    /* Cursor effect for typing animation */
-    content: "";
-    background-color: var(--color-bg-2);
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid var(--color-bg-2);
-    right: -8;
-    animation: cursor 0.5s infinite;
-}
-
-@keyframes cursor {
-    /* Keyframes for blinking cursor */
-    to {
-        border-left: 3px solid var(--color-grey-2);
-    }
-}
-
-@keyframes words {
-    /* Keyframes for changing words */
-    0%, 20% {
-        content: "Photographer";
-    }
-    21%, 40% {
-        content: "Programmer";
-    }
-    41%, 60% {
-        content: "App Developer";
-    }
-    61%, 80% {
-        content: "Web Designer";
-    }
-    81%, 100% {
-        content: "Business Specialist";
-    }
-}
-
-.content p {
-    /* Style for paragraph in content */
-    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
-    margin: 10px 0;
-}
-
-.social-links i {
-    /* Style for social media icons */
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    background-color: transparent;
-    border: 0.2rem solid var(--color-primary);
-    border-radius: 50%; /* Circle icons */
-    color: var(--color-primary);
-    margin: 5px 15px 5px 0;
-    font-size: 1.5rem;
-    transition: 0.5s linear;
-}
-
-.social-links i:hover {
-    /* Hover effect for social icons */
-    scale: 1.3;
-    filter: drop-shadow(0 0 10px var(--color-accent-3));
-    background-color: var(--color-accent-3);
-    color: var(--color-grey-1);
-}
-
-.content button {
-    /* Style for buttons */
+.content .main-content{
     width: 50%;
-    height: 6vh;
-    margin: 30px;
-    background-color: var(--color-primary);
-    color: var(--color-bg-1);
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
+}
+
+.main-content h1{
+    font-size: clamp(2rem, 1rem + 5vw, 6rem);
+}
+
+.main-content span{
+    font-size: clamp(2rem, 1rem + 5vw, 6rem);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.main-content p{
+    font-size: clamp(1rem, 1rem + 5vw, 1.2rem);
+}
+
+.main-content .buttons{
+    width: 70%;
+    margin: 5%;
+    min-height: 5.5vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-content .buttons button{
+    width: 160px;
+    margin: 0 10px;
+    border-radius: 20px;
+    background: var(--color-primary);
+    color: var(--color-dark-1);
     border: none;
     outline: none;
-    font-size: 120%;
+    font-size: 1.1rem;
     font-weight: 700;
-    border-radius: 10px;
-    transition: 0.2s linear;
+    transform: 0.2s linear;
 }
 
-.content button:hover {
-    /* Hover effect for buttons */
-    scale: 1.1;
-    color: var(--color-grey-1);
-    border: 2px solid var(--color-primary);
-    box-shadow: 0 0 40px 5px var(--color-primary);
+.buttons button:hover{
+    box-shadow: 2px 2px 30px var(--color-primary);
 }
 
-@media (max-width: 768px) {
-    /* Responsive styles for smaller screens */
-    nav .logo {
-        position: absolute;
-        top: 16px;
-        left: 15px;
-        font-size: 1.5rem;
+.content .image{
+    width: 50%;
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+.image img{
+    margin-top: 40px;
+    width: 500px;
+    filter: drop-shadow(0 0 400px var(--color-primary));
+}
+
+@media (max-width:768px){
+    .links{
+        display: none;
     }
 
-    .main-container {
-        flex-direction: column; /* Stack content vertically */
-    }
-
-    .nav-container .links {
-        display: none; /* Hide links */
-    }
-
-    .hamburg .cancel {
-        display: block; /* Show hamburger menu */
-    }
-
-    .main-container .content {
-        width: 80%;
-        margin-top: -40px;
+    .nav-container button{
+        display: none;
     }
 
     nav svg{
         display: block;
     }
-    .social-links i {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.5rem;
+
+    .nav-container .logo{
+        position: absolute;
+        left: 10px;
     }
 
-    .typing-text {
-        font-size: 2rem;
+    .content{
+        margin-top: -100px;
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
     }
 
-    .main-container .image {
-        z-index: -1;
-        width: 50%;
-        height: 60%;
+    .image img{
+        width: 120%;
     }
+
+    .content .main-content{
+        max-width: 350px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-content p{
+        text-align: center;
+    }
+
 }
-
-@media (max-width: 440px) {
-    /* Responsive styles for even smaller screens */
-    .main-container .image {
-        width: 70%;
-        height: 60%;
-    }
-
-    .main-container .content {
-        width: 80%;
-    }
-
-    .main-container button {
-        margin-top: 15px;
-    }
-}
-
