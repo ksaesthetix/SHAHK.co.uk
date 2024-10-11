@@ -61,9 +61,9 @@ nav {
 }
 
 .nav-container .links a:hover {
-    color: var(--color-grey-2);
+    color: var(--color-primary);
     border-bottom: 2px solid var(--color-primary);
-    text-shadow: 1px 1px var(--color-primary);
+    /*text-shadow: 1px 1px var(--color-primary);*/
 }
 
 nav button {
@@ -81,7 +81,7 @@ nav button {
 }
 
 nav button:hover {
-    background-color: white;
+    background-color: var(--color-grey-1) ;
     color: var(--color-bg-3);
     border: 2px solid var(--color-primary);
 }
@@ -119,8 +119,8 @@ nav .dropmenu {
 }
 
 .dropmenu a:hover {
-    background-color: var(--color-grey-2);
-    color: var(--color-grey-2);
+    background-color: transparent;
+    color: var(--color-primary);
 }
 
 .dropmenu button {
