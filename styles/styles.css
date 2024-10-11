@@ -296,9 +296,9 @@ section .content {
     50% {
         border-color: transparent;
     }
-    /* Keyframes for blinking cursor */
+    /* Keyframes for blinking cursor*/ 
     to {
-        border-left: 3px solid var(--color-grey-2);
+        border-left: 3px solid transparent;
     }
 }
 
