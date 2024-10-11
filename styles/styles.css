@@ -81,7 +81,7 @@ nav button {
 }
 
 nav button:hover {
-    background-color: var(--color-grey-1) ;
+    background-color: transparent;
     color: var(--color-bg-3);
     border: 2px solid var(--color-primary);
 }
@@ -97,7 +97,7 @@ nav svg {
 nav .dropmenu {
     position: absolute;
     top: 0;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
     width: 100%;
     height: auto;
     transform: translateY(-300px);
