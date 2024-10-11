@@ -115,15 +115,17 @@ section{
     align-items: center;
 }
 .main-container .image{
-    width: 500px;
-    height: 80vh;
+    width: 250px; /* Smaller width for the container */
+    height: 250px; /* Same height to maintain a square container */
     overflow: hidden;
-    border: 5px solid var(--color-primary); /* Adds a border */
-    border-radius: 50%; /* Makes the image round */
-    object-fit: cover;
+    border-radius: 50%; /* Ensures the container itself is round */
 }
 .main-container .image img{
     width: 100%;
+    height: 100%;
+    border: 5px solid var(--color-primary); /* Keeps the border */
+    border-radius: 50%; /* Ensures the image remains round */
+    object-fit: cover; /* Makes sure the image scales properly */
 }
 .main-container .image img:hover{
     animation: animate 1.5s ease-in-out infinite;
