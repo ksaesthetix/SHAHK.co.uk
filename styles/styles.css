@@ -98,6 +98,7 @@ nav .dropmenu {
     position: absolute;
     top: 0;
     backdrop-filter: blur(5px);
+    background-color: var(--color-bg-2);
     width: 100%;
     height: auto;
     transform: translateY(-300px);
