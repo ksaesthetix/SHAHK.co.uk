@@ -119,8 +119,8 @@ nav .dropmenu {
 }
 
 .dropmenu a:hover {
-    background-color: var(--color-primary);
-    color: var(--color-grey-1);
+    background-color: var(--color-grey-2);
+    color: var(--color-grey-2);
 }
 
 .dropmenu button {
