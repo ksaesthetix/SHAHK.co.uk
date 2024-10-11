@@ -206,7 +206,6 @@ section .content {
     width: 500px;
     border: 2px solid var(--color-primary); /* Add this line for the border */
     border-radius: 5px; /* Optional: Add rounded corners */
-
 }
 
 @media (max-width: 768px) {
