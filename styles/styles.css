@@ -104,21 +104,32 @@ nav {
     border-bottom: 2px solid var(--color-primary);
 }
 
-.dropdown {
+nav svg{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .dropdown {
     /* Style dropdown menu */
-    z-index: 10;
     position: absolute;
     top: 0;
-    transform: translateY(-400px); /* Initially hidden off-screen */
+    transform: translateY(-300px); /* Initially hidden off-screen */
     width: 100%;
     height: auto;
-    backdrop-filter: blur(5px) brightness(40%);
+    backdrop-filter: blur(2px);
     box-shadow: 0 0 20px var(--color-dark-1);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     transition: 0.2 linear;
 }
 
 .dropdown a {
     /* Style for dropdown links */
+    font-size: 1.4rem;
     display: flex;
     color: var(--color-grey-1);
     text-decoration: none;
@@ -126,6 +137,8 @@ nav {
     justify-content: center;
     align-items: center;
     transition: 0.3 linear;
+    text-align: center;
+    width: 100%;   
 }
 
 .dropdown a:hover {
@@ -337,6 +350,9 @@ section {
         margin-top: -40px;
     }
 
+    nav svg{
+        display: block;
+    }
     .social-links i {
         width: 2.5rem;
         height: 2.5rem;
