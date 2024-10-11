@@ -81,8 +81,8 @@ nav button {
 }
 
 nav button:hover {
-    background-color: transparent;
-    color: var(--color-bg-3);
+    background-color: var(--color-bg-3);
+    color: var(--color-primary);
     border: 2px solid var(--color-primary);
 }
 
@@ -119,7 +119,7 @@ nav .dropmenu {
 }
 
 .dropmenu a:hover {
-    background-color: transparent;
+    background-color: var(--color-bg-3);
     color: var(--color-primary);
 }
 
