@@ -1,75 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Kieran Shah Portfolio</title>
-        <!-- Favicon -->
-        <link rel="icon" href="images/favicon-32x32.ico" type="image/x-icon">
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
-        <!-- ICONSCOUT -->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> 
-        <!-- Stylesheet -->
-         <link rel="stylesheet" href="./styles.css">
-    </head>
-    <body>
-        <nav>
-            <div class="container nav_container">
-                <a href="index.html"><img class="nav_logo" src="images/logo_lighterY.png" alt="Nav Logo"></a>
-                <ul class="nav_links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#coding">Coding</a></li>
-                </ul>
-                <ul class="nav_socials">
-                    <li><a href="https://instagram.com/" target="_blank"><i class="uil uil-instagram-alt"></i></a></li>
-                    <li><a href="https://github.com/" target="_blank"><i class="uil uil-github"></i></a></li>
-                </ul>
-                <button class="nav_toggle-btn" id="nav_toggle-open"><i class="uil uil-bars"></i></button>
-                <button class="nav_toggle-btn" id="nav_toggle-close" style="display: none;"><i class="uil uil-multiply"></i></button>       
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kieran Shah Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon-32x32.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+    <!-- ICONSCOUT -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Misc -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo"> 
+                <img src="images/logo_lighterY.png" alt="">
             </div>
-        </nav>
-        <!-- END NAV -->
-        <header>
-            <div class="container header_container">
-                <div class="header_left">
-                    <div class="header_image-bg"></div>
-                    <div class="header_image-lg">
-                        <img src="images/header2.JPG" alt="Header Image">
-                    </div>
-                    <div class="header_image-sm">
-                        <img src="images/header2.JPG" alt="Header Image">
-                    </div>
-                </div>
-                <div class="header_right">
-                    <div class="header_head">
-                        <div class="empty header_empty"></div>
-                        <a class="header_tag">#Best Photographer 2024 </a>
-                    </div>
-                    <h1>See the Beauty of the world through my lens</h1>
-                    <p> Welcome to my photography portfolio, a curated collection of moments captured through my lens. Each photograph represents not just a scene, but a story—a glimpse into the emotions, beauty, and subtleties of life as I see it. Whether it's the raw power of nature, the intricacies of urban landscapes, or the quiet elegance of a portrait, my work reflects a deep passion for capturing the world in its most authentic and compelling forms. I invite you to explore these images and experience the stories they tell. </p>
-                    <a href="mailto:stuartshah22@hotmail.com" class="header_btn-md">Let's Talk</a>
-                </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="100"><a href="">Home</a></div>
+                <div class="link"data-aos="fade-up"data-aos-duration="200"><a href="">About</a></div>
+                <div class="link"data-aos="fade-up"data-aos-duration="300"><a href="">Gallery</a></div>
+                <div class="link"data-aos="fade-up"data-aos-duration="400"><a href="">Coding</a></div>
             </div>
-        </header>
-        <div class="header_frames">
-            <div class="header_frame">
-                <img src="images/header.JPG" alt="Header Frame One">
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            <div class="dropdown">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Gallery</a>
+                <a href="">Coding</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
-            <div class="header_frame">
-                <img src="images/header.JPG" alt="Header Frame Two">
-            </div>    
         </div>
-        <a href="mailto:stuartshah22@hotmail.com" class="contact_btn header_btn">
-            <i class="uil uil-arrow-up-right"></i>
-            <p>CONTACT - SEND ME AN EMAIL</p>
-        </a>
-        <script src="./main.js"></script>
-    </body>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="3000">
+                <img src="images/header2.JPG" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-right" data-aos-duration="1500"data-aos-delay="700">Hey I'm <span>Kieran</span></h1>
+                <h2 class="typing-text"data-aos="fade-left" data-aos-duration="1500" data-aos-delay="900">I'm a <span></span></h2>
+                <p data-aos="flip-up" data-aos-duration="1500" data-aos-delay="1100">Welcome to my photography portfolio, a curated collection of moments captured through my lens. Each photograph represents not just a scene, but a story—a glimpse into the emotions, beauty, and subtleties of life as I see it. Whether it's the raw power of nature, the intricacies of urban landscapes, or the quiet elegance of a portrait, my work reflects a deep passion for capturing the world in its most authentic and compelling forms. I invite you to explore these images and experience the stories they tell.</p>
+                <div class="social-links">
+                    <a href="" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1200"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <div class="btn" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
+                    <button>Contact Me</button>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 0,
+        });
+
+        // Function for opening/closing menu
+        function hamburg() {
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.transform = "translateY(0px)";
+        }
+
+        function close() {
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.transform = "translateY(-400px)";
+        }
+    </script>  
+</body>
 </html>
