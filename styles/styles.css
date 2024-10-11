@@ -93,6 +93,20 @@ nav svg {
     cursor: pointer;
     display: none;
 }
+/* Change the fill color of the hamburger icon */
+.hamburg {
+    fill: var(--color-primary); /* Set to your desired color */
+}
+
+/* Change the fill color of the cancel icon */
+.cancel {
+    fill: var(--color-primary); /* Set to your desired color */
+}
+
+/* Optional: Add hover effects */
+.hamburg:hover, .cancel:hover {
+    fill: var(--color-grey-2); /* Change color on hover, if desired */
+}
 
 nav .dropmenu {
     position: absolute;
