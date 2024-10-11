@@ -118,6 +118,9 @@ section{
     width: 500px;
     height: 80vh;
     overflow: hidden;
+    border: 5px solid var(--color-primary); /* Adds a border */
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover;
 }
 .main-container .image img{
     width: 100%;
