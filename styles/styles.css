@@ -204,7 +204,6 @@ section .content {
 .image img {
     margin-top: 40px;
     width: 500px;
-    filter: drop-shadow(0 0 400px var(--color-primary));
     border: 2px solid var(--color-primary); /* Add this line for the border */
     border-radius: 5px; /* Optional: Add rounded corners */
 
