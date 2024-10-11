@@ -481,4 +481,32 @@ button:hover {
 .project-item:hover {
     transform: scale(1.05); /* Scale up project item on hover */
 }
+#photography-services,
+#coding-services {
+    width: 100%;
+    padding: 50px 0;
+    background-color: var(--color-bg-2); /* Background for the new sections */
+}
+
+#photography-services h2,
+#coding-services h2 {
+    font-size: clamp(2rem, 1rem + 5vw, 4rem);
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.image img {
+    width: 100%; /* Adjust as needed for responsiveness */
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    margin-top: 20px; /* Space above image */
+}
+
 
