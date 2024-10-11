@@ -49,7 +49,7 @@ nav {
 
 .nav-container .logo img {
     width: auto;
-    height: 4rem;
+    height: 6rem;
 }
 
 .nav-container .links a {
@@ -205,6 +205,9 @@ section .content {
     margin-top: 40px;
     width: 500px;
     filter: drop-shadow(0 0 400px var(--color-primary));
+    border: 2px solid var(--color-primary); /* Add this line for the border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+
 }
 
 @media (max-width: 768px) {
