@@ -410,4 +410,75 @@ button:hover {
 .portfolio-item img:hover {
     transform: scale(1.05); /* Scale up image on hover */
 }
+#projects {
+    width: 100%;
+    padding: 50px 0;
+    background-color: var(--color-bg-2);
+}
+
+#projects h2 {
+    font-size: clamp(2rem, 1rem + 5vw, 4rem);
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 30px;
+}
+
+.projects-container {
+    max-width: 1200px; /* Set max width for the projects section */
+    margin: 0 auto; /* Center the projects */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between project items */
+    padding: 0 10%; /* Side padding */
+}
+
+.project-item {
+    background-color: var(--color-bg-3);
+    border: 2px solid var(--color-primary); /* Border around project items */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside project items */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.project-item img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 2px solid var(--color-primary); /* Border below image */
+    border-radius: 5px 5px 0 0; /* Rounded corners for top */
+}
+
+.project-item h3 {
+    font-size: 1.5rem; /* Title font size */
+    color: var(--color-light);
+    margin: 10px 0; /* Margin around title */
+}
+
+.project-item p {
+    font-size: 1rem; /* Description font size */
+    color: var(--color-light);
+    margin: 10px 0; /* Margin around description */
+}
+
+.project-item a {
+    display: inline-block; /* Make link a block */
+    background-color: var(--color-primary);
+    color: var(--color-bg-3);
+    padding: 10px 15px; /* Padding around link */
+    border-radius: 20px; /* Rounded corners for button */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Animation for hover effect */
+}
+
+.project-item a:hover {
+    background-color: var(--color-bg-3); /* Change background on hover */
+    color: var(--color-primary); /* Change text color on hover */
+}
+
+.project-item:hover {
+    transform: scale(1.05); /* Scale up project item on hover */
+}
 
