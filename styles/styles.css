@@ -23,7 +23,7 @@
 }
 
 body {
-    background-color: var(--color-bg-3);
+    background-color: var(--color-bg-2);
     width: 100%;
     height: auto;
     overflow: auto;
