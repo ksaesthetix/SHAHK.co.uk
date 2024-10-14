@@ -340,6 +340,7 @@ section .content {
     max-width: 600px;
     margin: 0 auto;
     background-color: var(--color-bg-2); /* A slightly lighter background for contrast */
+    border: 2px solid var(--color-primary);
     border-radius: 10px; /* Rounded corners */
     padding: 30px; /* Padding inside the form */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow for elevation effect */
