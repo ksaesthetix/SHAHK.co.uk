@@ -18,7 +18,7 @@
 
 <body>
     <nav>
-        <div class="nav-container">
+        <div class="nav-container" data-aos="fade-down">
             <div class="logo">
                 <a href="https://shahk.co.uk/"><img src="images/logo_lighterY.png" alt=""></a>
             </div>
@@ -31,7 +31,7 @@
             <a href="contactme.html"><button>Contact Me</button></a>
             <svg xmlns="http://www.w3.org/2000/svg" class="hamburg" height="32" width="34" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
         </div>
-        <div class="dropmenu">
+        <div class="dropmenu" data-aos="fade-up">
             <a href="https://shahk.co.uk/">Home</a>
             <a href="about.html">About Me</a>
             <a href="gallery.html">Photography</a>
@@ -42,29 +42,30 @@
     </nav>
 
     <section id="photography-services">
-        <div class="content">
-            <div class="main-content">
+        <div class="content" data-aos="fade-right">
+            <div class="main-content" data-aos="zoom-in">
                 <h2>Photography Services</h2>
                 <p>Capture your moments with professional photography services. Whether it's portraits, events, or product photography, I'm here to deliver stunning visuals that tell your story.</p>
-                <div class="buttons">
+                <div class="buttons" data-aos="fade-up">
                     <button>View Portfolio</button>
                 </div>
             </div>
-            <div class="image">
+            <div class="image" data-aos="fade-left">
                 <img src="path/to/your/photography-image.jpg" alt="Photography Services">
             </div>
         </div>
     </section> 
+
     <section id="coding-services">
-        <div class="content">
-            <div class="main-content">
+        <div class="content" data-aos="fade-left">
+            <div class="main-content" data-aos="zoom-in">
                 <h2>Coding Services</h2>
                 <p>From web development to app creation, I offer a range of coding services tailored to meet your needs. Let's bring your ideas to life with efficient and clean code.</p>
-                <div class="buttons">
+                <div class="buttons" data-aos="fade-up">
                     <button>View Projects</button>
                 </div>
             </div>
-            <div class="image">
+            <div class="image" data-aos="fade-right">
                 <img src="path/to/your/coding-image.jpg" alt="Coding Services">
             </div>
         </div>
@@ -72,7 +73,7 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({offset:1});
+      AOS.init({offset: 100});
     </script>
     <script>
         const hamburg = document.querySelector('.hamburg')
@@ -90,3 +91,4 @@
     </script>
 </body>
 </html>
+
