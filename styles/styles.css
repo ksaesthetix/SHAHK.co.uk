@@ -23,7 +23,7 @@
 }
 
 body {
-    background-color: var(--color-bg-2);
+    background-color: var(--color-bg-3);
     width: 100%;
     height: auto;
     overflow: auto;
@@ -282,7 +282,7 @@ section .content {
 
 .typing-text span::after {
     content: "";
-    background-color: var(--color-bg-2);
+    background-color: var(--color-bg-3);
     position: absolute;
     width: calc(100% + 8px); /* Width of the cursor */
     height: 100%;
@@ -395,7 +395,7 @@ button:hover {
 #portfolio {
     width: 100%;
     padding: 50px 0;
-    background-color: var(--color-bg-2);
+    background-color: var(--color-bg-3);
 }
 
 #portfolio h2 {
@@ -431,7 +431,7 @@ button:hover {
 #projects {
     width: 100%;
     padding: 50px 0;
-    background-color: var(--color-bg-2);
+    background-color: var(--color-bg-3);
 }
 
 #projects h2 {
@@ -454,7 +454,7 @@ button:hover {
 }
 
 .project-item {
-    background-color: var(--color-bg-3);
+    background-color: var(--color-bg-2);
     border: 2px solid var(--color-primary); /* Border around project items */
     border-radius: 5px; /* Rounded corners */
     padding: 20px; /* Padding inside project items */
@@ -504,7 +504,7 @@ button:hover {
 #coding-services {
     width: 100%;
     padding: 50px 0;
-    background-color: var(--color-bg-2); /* Background for the new sections */
+    background-color: var(--color-bg-3); /* Background for the new sections */
 }
 
 #photography-services h2,
