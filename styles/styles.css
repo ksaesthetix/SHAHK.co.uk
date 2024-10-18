@@ -16,527 +16,414 @@
 }
 
 * {
-    padding: 0;
     margin: 0;
-    font-family: 'Overpass', sans-serif;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    font-family: 'Overpass', sans-serif;;
     background-color: var(--color-bg-3);
-    width: 100%;
-    height: auto;
-    overflow: auto;
-    position: relative;
+    color: var(--color-light);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg-1);
+    padding: 20px 0;
+    z-index: 1000;
 }
 
 nav {
-    z-index: 4;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 10vh;
-    backdrop-filter: brightness(100%);
-    
-}
-
-.nav-container {
-    width: 100%;
-    height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    background-color: var(--color-bg-2);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.nav-container .logo img {
-    width: auto;
-    height: 10rem;
-}
-
-.nav-container .links a {
-    font-size: 1.3rem;
-    color: var(--color-primary);
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-light);
     text-decoration: none;
-    margin: 0 20px;
-    transition: 0.3s linear;
 }
 
-.nav-container .links a:hover {
-    color: var(--color-primary);
-    border-bottom: 2px solid var(--color-primary);
-    /*text-shadow: 1px 1px var(--color-primary);*/
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-nav button {
-    width: 150px;
-    height: 40px;
-    border-radius: 20px;
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-light);
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
     background-color: var(--color-primary);
     color: var(--color-bg-3);
-    font-size: 1.2rem;
-    transition: 0.3s linear;
-    font-weight: 700;
-    box-shadow: 1px 1px 10px var(--color-primary);
-    border: none;
-    outline: none;
 }
 
-nav button:hover {
-    background-color: var(--color-bg-3);
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
-}
-
-nav svg {
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    cursor: pointer;
-    display: none;
-}
-/* Change the fill color of the hamburger icon */
-.hamburg {
-    fill: var(--color-primary); /* Set to your desired color */
-}
-
-/* Change the fill color of the cancel icon */
-.cancel {
-    fill: var(--color-primary); /* Set to your desired color */
-}
-
-/* Optional: Add hover effects */
-.hamburg:hover, .cancel:hover {
-    fill: var(--color-grey-2); /* Change color on hover, if desired */
-}
-
-nav .dropmenu {
-    position: absolute;
-    top: 0;
-    backdrop-filter: blur(5px);
-    background-color: var(--color-bg-2);
-    width: 100%;
-    height: auto;
-    transform: translateY(-300px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: 0.3s linear;
-}
-
-.dropmenu a {
-    font-size: 1.4rem;
-    text-align: center;
-    width: 100%;
-    color: var(--color-primary);
-    padding: 10px 0;
+.contact-btn {
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: var(--color-bg-3);
     text-decoration: none;
-    transition: 0.3s linear;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.dropmenu a:hover {
+.contact-btn:hover {
+    background-color: var(--color-primary-variant);
+    color: var(--color-accent-3);
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
     background-color: var(--color-bg-3);
+}
+
+.hero h1 {
+    font-size: 5rem;
+}
+.hero p {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.hero .dynamic-text {
     color: var(--color-primary);
 }
 
-.dropmenu button {
-    width: 100%;
-    height: 45px;
+.buttons {
+    margin-top: 20px;
 }
 
-/* Landing Page  */
-
-section {
-    width: 100%;
-    height: 100vh;
-    margin-top: 10vh;
+.buttons p {
+    font-size: 1.2rem;
+    color: var(--color-text);
+    margin: 10px 0;
 }
 
-section .content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.content .main-content {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 10%;
-}
-
-.main-content h1 {
-    font-size: clamp(2rem, 1rem + 5vw, 4rem);
-    color: var(--color-light);
-}
-
-.main-content span {
-    font-size: clamp(2rem, 1rem + 5vw, 4rem);
-    font-weight: 700;
-    color: var(--color-primary);
-}
-
-.main-content p {
-    font-size: clamp(1rem, 1rem + 5vw, 1.2rem);
-    color: var(--color-light);
-}
-.main-content h2 {
-    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
-    color: var(--color-light);
-}
-
-.main-content .buttons {
-    width: 70%;
-    margin: 5%;
-    min-height: 5.5vh;
-    display: flex;
-    justify-content: space-around;
-}
-
-.main-content .buttons button {
-    width: 160px;
-    margin: 0 10px;
-    border-radius: 20px;
-    background: var(--color-primary);
-    color: var(--color-dark-1);
+.buttons button {
+    width: 150px; /* Adjust the width as needed */
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: var(--color-primary);
     border: none;
-    outline: none;
-    font-size: 1.1rem;
-    font-weight: 700;
-    transform: 0.2s linear;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .buttons button:hover {
-    box-shadow: 2px 2px 30px var(--color-primary);
+    background-color: var(--color-primary-variant);
+    color: var(--color-accent-3);
 }
 
-.content .image {
-    width: 50%;
-    display: flex;
-    margin-top: 5px;
-}
 
-.image img {
-    margin-top: 0px;
-    width: 100%;
-    border: 2px solid var(--color-primary); /* Add this line for the border */
-    border-radius: 5px; /* Optional: Add rounded corners */
-}
-
-@media (max-width: 768px) {
-    .links {
-        display: none;
-    }
-
-    .nav-container button {
-        display: none;
-    }
-
-    nav svg {
-        display: block;
-    }
-
-    .nav-container .logo {
-        position: absolute;
-        left: 10px;
-    }
-
-    .content {
-        margin-top: -100px;
-        display: flex;
-        width: 100%;
-        flex-direction: column-reverse;
-    }
-
-    .image img {
-        width: 120%;
-    }
-
-    .content .main-content {
-        max-width: 350px;
-        align-items: center;
-        width: 100%;
-    }
-
-    .main-content p {
-        text-align: center;
-    }
-    
-}
-
-/* Typing Effect Styles */
-.typing-text {
-    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+/* Photography and Coding Sections and About ME */
+.grid-section {
+    padding: 50px 20px;
+    background-color: var(--color-bg-3);
+    text-align: center;
     position: relative;
 }
 
-.typing-text span::before {
-    content: "";
-    display: inline-block; /* Make span an inline block */
-    color: var(--color-primary); /* Set color of the words */
-    animation: words 20s infinite; /* Use original keyframes for words */
+.grid-section h2 {
+    margin-bottom: 20px; /* Adjust the value as needed */
 }
 
-.typing-text span::after {
-    content: "";
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
     background-color: var(--color-bg-3);
-    position: absolute;
-    width: calc(100% + 8px); /* Width of the cursor */
-    height: 100%;
-    border-left: 3px solid var(--color-grey-2);
-    right: -8;
-    animation: cursor 0.5s infinite; /* Cursor blinking */
+    padding: 20px;
+    border: 3px solid var(--color-primary);
 }
 
-@keyframes cursor {
-    /* Keyframes for blinking cursor */
-    50% {
-        border-color: transparent;
-    }
-    /* Keyframes for blinking cursor*/ 
-    to {
-        border-left: 3px solid transparent;
-    }
-}
-
-@keyframes words {
-    0%, 20% {
-        content: "Photographer"; /* Word to show */
-    }
-    21%, 40% {
-        content: "Programmer"; /* Word to show */
-    }
-    41%, 60% {
-        content: "App Developer"; /* Word to show */
-    }
-    61%, 80% {
-        content: "Web Designer"; /* Word to show */
-    }
-    81%, 100% {
-        content: "Business Specialist"; /* Word to show */
-    }
-}
-/* Contact Form Styles */
-#contact {
-    width: 100%;
-    padding: 50px 0;
-    background-color: var(--color-bg-3); /* Background for the contact section */
-}
-
-#contact h2 {
-    font-size: clamp(2rem, 1rem + 5vw, 4rem);
+/* Photography Slider */
+.photography {
+    padding: 50px 20px;
+    background-color: var(--color-bg-3);
     text-align: center;
-    color: var(--color-primary);
+    position: relative;
+}
+
+.photography h2 {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.slide {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.grid-item {
+    background-color: var(--color-bg-3);
+    padding: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.grid-item:hover {
+    background-color: var(--color-grey-2); /* Change to your desired hover background color */
+}
+
+.grid-item:hover img {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color-primary);
+    color: var(--color-dark-1);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+
+/* Coding Slider */
+.coding {
+    padding: 50px 20px;
+    background-color: var(--color-bg-3);
+    text-align: center;
+    position: relative;
+}
+
+.coding h2 {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+.coding-slider-container {
+    position: relative;
+    overflow:hidden;
+    max-width: 100%;
+}
+
+.coding-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.coding-slide {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.coding-slide .grid-item {
+    border: 1px solid var(--color-primary); /* Ensure border is set */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.coding-slide .grid-item:hover {
+    background-color: var(--color-grey-2); /* Change to your desired hover background color */
+    transform: scale(1.05); /* Slightly enlarge the container on hover */
+    border: 1px solid var(--color-primary); /* Maintain border on hover */
+}
+
+.coding-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: adds rounded corners to the images */
+    margin-bottom: 10px; /* Space between the image and the title */
+}
+
+.coding-prev-btn, .coding-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color-primary);
+    color: var(--color-dark-1);
+    border: none;
+    border-radius: px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.coding-prev-btn {
+    left: 10px;
+}
+
+.coding-next-btn {
+    right: 10px;
+}
+
+
+/* Contact Form */
+.contact {
+    padding: 50px 20px;/* Reduced padding */
+    text-align: center;
+    background-color: var(--color-bg-3);
+    max-width: 600px; /* Set a max-width to make the form smaller */
+    margin: 0 auto; /* Center the form */
+}
+
+.contact h2 {
+    margin-bottom: 15px; /* Adjusted margin */
+}
+
+.contact form {
+    display: grid;
+    gap: 10px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    background-color: var(--color-bg-1);
+    color: var(--color-light);
+    width: 100%;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-content: center;
+    width: 100%;
+}
+
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: var(--color-dark-1);
+    text-align: center;
+    color: var(--color-light);
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-around;
     margin-bottom: 20px;
 }
 
-#contact-form {
+footer .footer-content div {
+    margin: 10px;
+}
+
+footer .footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-content ul li {
+    margin: 5px 0;
+}
+
+footer .social-media h4 {
+    margin-bottom: 15px; /* Adjust the value as needed */
+}
+
+footer .social-media ul {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: var(--color-bg-2); /* A slightly lighter background for contrast */
-    border: 2px solid var(--color-primary);
-    border-radius: 10px; /* Rounded corners */
-    padding: 30px; /* Padding inside the form */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow for elevation effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    justify-content: center;
+    padding: 0;
 }
 
-#contact-form:hover {
-    transform: translateY(-5px); /* Lift the form on hover */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover for more depth */
+footer .social-media ul li {
+    margin: 0 10px;
 }
 
-.form-group {
-    width: 100%;
-    margin-bottom: 20px; /* Space between form fields */
+footer .social-media ul li .icon {
+    color: var(--color-primary); /* Change to your desired color */
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Adjust the size as needed */
 }
 
-.form-group label {
-    display: block; /* Block to ensure labels are above the inputs */
-    font-size: 1.1rem;
-    color: var(--color-grey-1);
-    margin-bottom: 5px; /* Space below label */
+footer .social-media ul li .icon:hover {
+    color: var(--color-grey-2); /* Change to your desired hover color */
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%; /* Full width */
-    padding: 10px;
-    border: 2px solid var(--color-grey-1);
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border 0.3s ease;
+footer .explore, footer .resources {
+    text-align: left; /* Align text to the left */
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--color-primary); /* Change border color on focus */
-    outline: none; /* Remove default outline */
+footer .explore h4, footer .resources h4 {
+    margin-bottom: 10px; /* Space between the heading and the list */
+    color: var(--color-primary); /* Change to your desired heading color */
 }
 
-.form-group textarea {
-    height: 150px; /* Set a height for the textarea */
-    resize: none; /* Disable resizing */
+footer .explore ul, footer .resources ul {
+    list-style: none;
+    padding: 0;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: var(--color-primary);
-    color: var(--color-bg-2);
-    font-size: 1.2rem;
-    transition: 0.3s linear;
-    font-weight: 700;
-    border: none;
-    outline: none;
+footer .explore ul li, footer .resources ul li {
+    margin: 5px 0;
+    color: var(--color-grey-1); /* Change to your desired text color */
 }
 
-button:hover {
-    background-color: var(--color-bg-3); /* Change button color on hover */
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
-}
-#portfolio {
-    width: 100%;
-    padding: 50px 0;
-    background-color: var(--color-bg-3);
+footer .explore ul li .icon:hover,footer .resources ul li .icon:hover  {
+    color: var(--color-grey-2); /* Change to your desired hover color */
 }
 
-#portfolio h2 {
-    font-size: clamp(2rem, 1rem + 5vw, 4rem);
-    text-align: center;
-    color: var(--color-primary);
-    margin-bottom: 30px;
+footer .footer-bottom {
+    border-top: 1px solid var(--color-primary);
+    padding-top: 10px;
 }
 
-.portfolio-container {
-    max-width: 1200px; /* Set max width for the portfolio */
-    margin: 0 auto; /* Center the portfolio */
+footer .footer-bottom p {
+    margin: 0;
 }
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between photos */
-    padding: 0 10%; /* Side padding */
-}
-
-.portfolio-item img {
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    border: 2px solid var(--color-primary); /* Border around images */
-    border-radius: 5px; /* Rounded corners */
-    transition: transform 0.3s ease; /* Animation for hover effect */
-}
-
-.portfolio-item img:hover {
-    transform: scale(1.05); /* Scale up image on hover */
-}
-#projects {
-    width: 100%;
-    padding: 50px 0;
-    background-color: var(--color-bg-3);
-}
-
-#projects h2 {
-    font-size: clamp(2rem, 1rem + 5vw, 4rem);
-    text-align: center;
-    color: var(--color-primary);
-    margin-bottom: 30px;
-}
-
-.projects-container {
-    max-width: 1200px; /* Set max width for the projects section */
-    margin: 0 auto; /* Center the projects */
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between project items */
-    padding: 0 10%; /* Side padding */
-}
-
-.project-item {
-    background-color: var(--color-bg-2);
-    border: 2px solid var(--color-primary); /* Border around project items */
-    border-radius: 5px; /* Rounded corners */
-    padding: 20px; /* Padding inside project items */
-    text-align: center; /* Center text */
-    transition: transform 0.3s ease; /* Animation for hover effect */
-}
-
-.project-item img {
-    width: 100%; /* Full width for images */
-    height: auto; /* Maintain aspect ratio */
-    border-bottom: 2px solid var(--color-primary); /* Border below image */
-    border-radius: 5px 5px 0 0; /* Rounded corners for top */
-}
-
-.project-item h3 {
-    font-size: 1.5rem; /* Title font size */
-    color: var(--color-light);
-    margin: 10px 0; /* Margin around title */
-}
-
-.project-item p {
-    font-size: 1rem; /* Description font size */
-    color: var(--color-light);
-    margin: 10px 0; /* Margin around description */
-}
-
-.project-item a {
-    display: inline-block; /* Make link a block */
-    background-color: var(--color-primary);
-    color: var(--color-bg-3);
-    padding: 10px 15px; /* Padding around link */
-    border-radius: 20px; /* Rounded corners for button */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s ease; /* Animation for hover effect */
-}
-
-.project-item a:hover {
-    background-color: var(--color-bg-3); /* Change background on hover */
-    color: var(--color-primary); /* Change text color on hover */
-}
-
-.project-item:hover {
-    transform: scale(1.05); /* Scale up project item on hover */
-}
-
-#photography-services,
-#coding-services {
-    width: 100%;
-    padding: 50px 0;
-    background-color: var(--color-bg-3); /* Background for the new sections */
-}
-
-#photography-services h2,
-#coding-services h2 {
-    font-size: clamp(2rem, 1rem + 5vw, 4rem);
-    text-align: center;
-    color: var(--color-primary);
-    margin-bottom: 30px;
-}
-
-.content {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.image img {
-    width: 100%; /* Adjust as needed for responsiveness */
-    border: 2px solid var(--color-primary);
-    border-radius: 5px;
-    margin-top: 20px; /* Space above image */
-}
-
-
