@@ -51,6 +51,11 @@ nav {
     text-decoration: none;
 }
 
+.logo img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintains the aspect ratio */
+}
+
 .nav-links {
     list-style: none;
     display: flex;
