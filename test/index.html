@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kieran Shah - Portfolio</title>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- JavaScript for the Sliders -->
+    <script src="scripts.js" defer></script>
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body></body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="https://shahk.co.uk/"><img src="images/logo_lighterY.png" alt="">LOGO</a> <!-- You can replace LOGO with an actual logo image or text -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#photography">Photography</a></li>
+                <li><a href="#coding">Coding</a></li>
+            </ul>
+            <a href="#contact" class="contact-btn">Contact Me</a>
+        </nav>
+    </header>
+
+
+    <section id="hero" class="hero">
+        <h1>Welcome to SHAHK</h1>
+        <p>I am a <span class="dynamic-text"></span></p>
+        <div class="buttons">
+            <p>Click to hire me:</p>
+            <button>Photography</button>
+            <button>Coding</button>
+        </div>
+    </section>
+
+    <section class="grid-section">
+        <h2>About Me</h2>
+        <div class="grid">
+            <div class="grid-item">
+                <h3>Title</h3>
+                <p>Body text for whatever you'd like to say...</p>
+            </div>
+            <div class="grid-item">
+                <img src="KS_Profile_Pic2.jpg" alt="Description of image 1">
+            </div>
+        </div>
+    </section>
+
+    <!-- Photography Slider Section -->
+    <section id="photography" class="photography">
+        <h2>Photography</h2>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <div class="grid-item">
+                        <img src="KS_Profile_Pic2.jpg" alt="Description of image 1">
+                    </div>
+                    <div class="grid-item">
+                        <img src="KS_Profile_Pic2.jpg" alt="Description of image 2">
+                    </div>
+                    <div class="grid-item">
+                        <img src="KS_Profile_Pic2.jpg" alt="Description of image 3">
+                    </div>
+                    <div class="grid-item">
+                        <img src="KS_Profile_Pic2.jpg" alt="Description of image 4">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="grid-item">
+                        <img src="KS_Profile_Pic2.jpg" alt="Description of image 5">
+                    </div>
+                    <div class="grid-item">
+                        <img src="KS_Profile_Pic2.jpg" alt="Description of image 6">
+                    </div>
+                    <div class="grid-item">
+                        <img src="KS_Profile_Pic2.jpg" alt="Description of image 7">
+                    </div>
+                    <div class="grid-item">
+                        <img src="KS_Profile_Pic2.jpg" alt="Description of image 8">
+                    </div>
+                </div>
+            </div>
+            <button class="prev-btn">❮</button>
+            <button class="next-btn">❯</button>
+        </div>
+    </section>
+
+
+<!-- Coding Slider Section -->
+<section id="coding" class="coding">
+    <h2>Coding</h2>
+    <div class="coding-slider-container">
+        <div class="coding-slider">
+            <div class="coding-slide">
+                <div class="grid-item">
+                    <img src="KS_Profile_Pic2.jpg" alt="Image for Title 1">
+                    <h3>Title 1</h3>
+                    <p>Body text for coding project 1.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path/to/your/image2.jpg" alt="Image for Title 2">
+                    <h3>Title 2</h3>
+                    <p>Body text for coding project 2.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path/to/your/image3.jpg" alt="Image for Title 3">
+                    <h3>Title 3</h3>
+                    <p>Body text for coding project 3.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path/to/your/image4.jpg" alt="Image for Title 4">
+                    <h3>Title 4</h3>
+                    <p>Body text for coding project 4.</p>
+                </div>
+            </div>
+            <div class="coding-slide">
+                <div class="grid-item">
+                    <img src="path/to/your/image5.jpg" alt="Image for Title 5">
+                    <h3>Title 5</h3>
+                    <p>Body text for coding project 5.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path/to/your/image6.jpg" alt="Image for Title 6">
+                    <h3>Title 6</h3>
+                    <p>Body text for coding project 6.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path/to/your/image7.jpg" alt="Image for Title 7">
+                    <h3>Title 7</h3>
+                    <p>Body text for coding project 7.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path/to/your/image8.jpg" alt="Image for Title 8">
+                    <h3>Title 8</h3>
+                    <p>Body text for coding project 8.</p>
+                </div>
+            </div>
+        </div>
+        <button class="coding-prev-btn">❮</button>
+        <button class="coding-next-btn">❯</button>
+    </div>
+</section>
+
+
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Phone Number" required>
+            <textarea placeholder="Message"  required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Existing content -->
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#"><i data-feather="facebook" class="icon"></i></a></li>
+                    <li><a href="#"><i data-feather="github" class="icon"></i></a></li>
+                    <li><a href="#"><i data-feather="instagram" class="icon"></i></a></li>
+                    <li><a href="#"><i data-feather="linkedin" class="icon"></i></a></li>
+                </ul>
+            </div>
+            <div class="explore">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Photography</a></li>
+                    <li><a href="#">Development</a></li>
+                </ul>
+            </div>
+            <div class="resources">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Best Practices</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>©SHAHK 2024.</p>
+        </div>
+    </footer>
+</body>
+</html>
