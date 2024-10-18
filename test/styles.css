@@ -1,1 +1,236 @@
+:root {
+    /* Define global CSS variables for colors */
+    --color-primary: #FDDA0D;
+    --color-primary-variant: #221F1F;
+    --color-bg-1: #191919;
+    --color-bg-2: #2C2C2C;
+    --color-bg-3: #333333;
+    --color-accent-1: #DD6BCD;
+    --color-accent-2: #67DAFA;
+    --color-accent-3: #FCE00A;
+    --color-grey-1: #E9EBEC;
+    --color-grey-2: #706F6F;
+    --color-dark-1: #0E0E0E;
+    --color-light: #EFEFEF;
+    --color-light-variant: #A1B4C4;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Overpass', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg-3);
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    position: relative;
+}
+
+nav {
+    z-index: 4;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    backdrop-filter: brightness(100%);
+    
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-bg-2);
+}
+
+.nav-container .logo img {
+    width: auto;
+    height: 10rem;
+}
+
+.nav-container .links a {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    text-decoration: none;
+    margin: 0 20px;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a:hover {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    /*text-shadow: 1px 1px var(--color-primary);*/
+}
+
+nav button {
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--color-primary);
+}
+
+.form-group textarea {
+    height: 150px; /* Set a height for the textarea */
+    resize: none; /* Disable resizing */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--color-primary);
+    color: var(--color-bg-2);
+    font-size: 1.2rem;
+    transition: 0.3s linear;
+    font-weight: 700;
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    background-color: var(--color-bg-3); /* Change button color on hover */
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+#portfolio {
+    width: 100%;
+    padding: 50px 0;
+    background-color: var(--color-bg-3);
+}
+
+#portfolio h2 {
+    font-size: clamp(2rem, 1rem + 5vw, 4rem);
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 30px;
+}
+
+.portfolio-container {
+    max-width: 1200px; /* Set max width for the portfolio */
+    margin: 0 auto; /* Center the portfolio */
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between photos */
+    padding: 0 10%; /* Side padding */
+}
+
+.portfolio-item img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid var(--color-primary); /* Border around images */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05); /* Scale up image on hover */
+}
+#projects {
+    width: 100%;
+    padding: 50px 0;
+    background-color: var(--color-bg-3);
+}
+
+#projects h2 {
+    font-size: clamp(2rem, 1rem + 5vw, 4rem);
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 30px;
+}
+
+.projects-container {
+    max-width: 1200px; /* Set max width for the projects section */
+    margin: 0 auto; /* Center the projects */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between project items */
+    padding: 0 10%; /* Side padding */
+}
+
+.project-item {
+    background-color: var(--color-bg-2);
+    border: 2px solid var(--color-primary); /* Border around project items */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside project items */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.project-item img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 2px solid var(--color-primary); /* Border below image */
+    border-radius: 5px 5px 0 0; /* Rounded corners for top */
+}
+
+.project-item h3 {
+    font-size: 1.5rem; /* Title font size */
+    color: var(--color-light);
+    margin: 10px 0; /* Margin around title */
+}
+
+.project-item p {
+    font-size: 1rem; /* Description font size */
+    color: var(--color-light);
+    margin: 10px 0; /* Margin around description */
+}
+
+.project-item a {
+    display: inline-block; /* Make link a block */
+    background-color: var(--color-primary);
+    color: var(--color-bg-3);
+    padding: 10px 15px; /* Padding around link */
+    border-radius: 20px; /* Rounded corners for button */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Animation for hover effect */
+}
+
+.project-item a:hover {
+    background-color: var(--color-bg-3); /* Change background on hover */
+    color: var(--color-primary); /* Change text color on hover */
+}
+
+.project-item:hover {
+    transform: scale(1.05); /* Scale up project item on hover */
+}
+
+#photography-services,
+#coding-services {
+    width: 100%;
+    padding: 50px 0;
+    background-color: var(--color-bg-3); /* Background for the new sections */
+}
+
+#photography-services h2,
+#coding-services h2 {
+    font-size: clamp(2rem, 1rem + 5vw, 4rem);
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.image img {
+    width: 100%; /* Adjust as needed for responsiveness */
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    margin-top: 20px; /* Space above image */
+}
 
