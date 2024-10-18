@@ -31,7 +31,7 @@ header {
     position: sticky;
     top: 0;
     background-color: var(--color-bg-1);
-    padding: 20px 0;
+    padding: 10px 0;
     z-index: 1000;
 }
 
