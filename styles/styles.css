@@ -25,13 +25,14 @@ body {
     font-family: 'Overpass', sans-serif;;
     background-color: var(--color-bg-3);
     color: var(--color-light);
+    scroll-behavior: smooth;
 }
 
 header {
     position: sticky;
     top: 0;
     background-color: var(--color-bg-1);
-    padding: 10px 0;
+    padding: 20px 0;
     z-index: 1000;
 }
 
@@ -41,7 +42,8 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
+    height: 50px; /* Set a fixed height */
 }
 
 .logo a {
@@ -52,14 +54,15 @@ nav {
 }
 
 .logo img {
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* Maintains the aspect ratio */
+    width: 150px;
+    height: auto;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 40px;
+    align-items: center; /* Ensure items are vertically aligned */
 }
 
 .nav-links li {
@@ -73,6 +76,8 @@ nav {
     padding: 10px 15px;
     transition: all 0.3s ease;
     border-radius: 5px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
 }
 
 .nav-links a:hover {
@@ -80,13 +85,41 @@ nav {
     color: var(--color-bg-3);
 }
 
+/* Hamburger menu styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-light);
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Rotate the hamburger icon when active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 .contact-btn {
-    padding: 10px 20px;
     background-color: var(--color-primary);
-    color: var(--color-bg-3);
-    text-decoration: none;
-    font-weight: bold;
+    color: var(--color-bg-3); /* Updated text color */
+    padding: 10px 15px;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
@@ -163,8 +196,9 @@ nav {
     padding: 20px;
     border: 3px solid var(--color-primary);
 }
+
 .grid-item img {
-    width: 100%; /* Adjust the width as needed */
+    width: 100px; /* Adjust the width as needed */
     height: auto; /* Maintains the aspect ratio */
 }
 
@@ -210,7 +244,7 @@ nav {
 }
 
 .grid-item img {
-    width: 100%;
+    width: 100px;
     height: auto;
     border-radius: 5px;
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
@@ -289,7 +323,7 @@ nav {
 }
 
 .coding-slide img {
-    width: 100%;
+    width: 100px;
     height: auto;
     border-radius: 10px; /* Optional: adds rounded corners to the images */
     margin-bottom: 10px; /* Space between the image and the title */
@@ -435,4 +469,79 @@ footer .footer-bottom {
 
 footer .footer-bottom p {
     margin: 0;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: var(--color-bg-2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 300px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links .contact-btn {
+        display: none; /* Hide the main nav contact button on small screens */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: var(--color-bg-1);
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .hamburger-menu a {
+        padding: 10px 15px;
+        text-decoration: none;
+        color: var(--color-light);
+        border-bottom: 1px solid var(--color-bg-2);
+    }
+
+    .hamburger-menu a:hover {
+        background-color: var(--color-primary);
+        color: var(--color-bg-3);
+    }
+
+    .hamburger-menu .contact-btn {
+        display: block; /* Ensure the hamburger menu contact button is shown */
+        border-bottom: none;
+        color: var(--color-bg-3); /* Updated text color */
+    }
+
+    /* Additional rule to hide the main nav contact button on small screens */
+    .nav-links .contact-btn {
+        display: inline;
+    }
+
+    /* Ensure the hamburger menu contact button is shown */
+    .hamburger .contact-btn {
+        display: none;
+    }
+
 }
