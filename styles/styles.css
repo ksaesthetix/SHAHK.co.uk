@@ -477,6 +477,10 @@ footer .footer-bottom p {
 
 /* Mobile view */
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .nav-links {
         position: absolute;
         right: 0;
@@ -547,5 +551,4 @@ footer .footer-bottom p {
     .hamburger .contact-btn {
         display: none;
     }
-
 }
