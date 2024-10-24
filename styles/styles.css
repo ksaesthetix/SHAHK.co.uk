@@ -26,6 +26,8 @@ body {
     background-color: var(--color-bg-3);
     color: var(--color-light);
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 header {
@@ -40,7 +42,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 10px;
     height: 50px; /* Set a fixed height */
@@ -121,6 +123,8 @@ nav {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
 }
 
 .contact-btn:hover {
