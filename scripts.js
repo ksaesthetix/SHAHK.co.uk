@@ -82,8 +82,8 @@ const words = ["Web Developer", "Photographer", "Designer", "Programmer", "Busin
 let wordIndex = 0;
 let letterIndex = 0;
 let isDeleting = false;
-const typingSpeed = 150; // Speed of typing each letter
-const deletingSpeed = 100; // Speed of deleting each letter
+const typingSpeed = 80; // Speed of typing each letter
+const deletingSpeed = 80; // Speed of deleting each letter
 const delayBetweenWords = 2000; // Delay before starting to delete after typing the word
 
 const dynamicTextElement = document.querySelector('.dynamic-text');
