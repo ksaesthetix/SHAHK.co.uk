@@ -202,7 +202,7 @@ nav {
 }
 
 .grid-item img {
-    width: 100px; /* Adjust the width as needed */
+    width: 300px; /* Adjust the width as needed */
     height: auto; /* Maintains the aspect ratio */
 }
 
