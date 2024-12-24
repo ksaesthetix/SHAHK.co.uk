@@ -177,7 +177,7 @@ nav {
 }
 
 
-/* Photography and Coding Sections and About ME */
+/* Photography and Coding Sections and About Me */
 .grid-section {
     padding: 50px 20px;
     background-color: var(--color-bg-3);
@@ -230,7 +230,7 @@ nav {
     width: 100%;
 }
 
-.slide {
+.photography-slide {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -238,7 +238,7 @@ nav {
     box-sizing: border-box;
 }
 
-.grid-item {
+.photography-slide .grid-item {
     background-color: var(--color-bg-3);
     padding: 20px;
     border: 2px solid var(--color-primary);
@@ -247,22 +247,22 @@ nav {
     transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
-.grid-item img {
+.photography-slide .grid-item img {
     width: 300px;
     height: auto;
     border-radius: 5px;
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.grid-item:hover {
+.photography-slide .grid-item:hover {
     background-color: var(--color-grey-2); /* Change to your desired hover background color */
 }
 
-.grid-item:hover img {
+.photography-slide .grid-item:hover img {
     transform: scale(1.05); /* Slightly enlarge the image on hover */
 }
 
-.prev-btn, .next-btn {
+.photography-prev-btn, .photography-next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -274,11 +274,11 @@ nav {
     cursor: pointer;
 }
 
-.prev-btn {
+.photography-prev-btn {
     left: 10px;
 }
 
-.next-btn {
+.photography-next-btn {
     right: 10px;
 }
 
