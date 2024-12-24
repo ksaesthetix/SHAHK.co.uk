@@ -248,7 +248,7 @@ nav {
 }
 
 .grid-item img {
-    width: 100px;
+    width: 300px;
     height: auto;
     border-radius: 5px;
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
