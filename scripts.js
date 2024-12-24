@@ -78,7 +78,7 @@ function updateCodingSlider() {
 }
 
 // Typing Effect
-const words = ["Web Developer", "Photographer", "Designer", "Programmer", "Business Specialist"];
+const words = ["Web Developers", "Photographers", "Designers", "Programmers", "Business Specialists"];
 let wordIndex = 0;
 let letterIndex = 0;
 let isDeleting = false;
