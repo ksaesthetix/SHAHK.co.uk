@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Photography Slider
-const photoSlider = document.querySelector('.slider');
+const photoSlider = document.querySelector('.photography-slider');
 const photoSlides = document.querySelectorAll('.photography-slide');
 const photoPrevBtn = document.querySelector('.photography-prev-btn');
 const photoNextBtn = document.querySelector('.photography-next-btn');

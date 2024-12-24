@@ -218,13 +218,13 @@ nav {
     margin-bottom: 20px; /* Adjust the value as needed */
 }
 
-.slider-container {
+.photography-slider-container {
     position: relative;
     overflow: hidden;
     max-width: 100%;
 }
 
-.slider {
+.photography-slider {
     display: flex;
     transition: transform 0.5s ease;
     width: 100%;
