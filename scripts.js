@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Photography Slider
 const photoSlider = document.querySelector('.slider');
-const photoSlides = document.querySelectorAll('.slide');
-const photoPrevBtn = document.querySelector('.prev-btn');
-const photoNextBtn = document.querySelector('.next-btn');
+const photoSlides = document.querySelectorAll('.photography-slide');
+const photoPrevBtn = document.querySelector('.photography-prev-btn');
+const photoNextBtn = document.querySelector('.photography-next-btn');
 
 let photoIndex = 0;
 
