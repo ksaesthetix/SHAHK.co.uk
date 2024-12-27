@@ -183,6 +183,9 @@ nav {
     background-color: var(--color-bg-3);
     text-align: center;
     position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .grid-section h2 {
@@ -190,21 +193,24 @@ nav {
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*grid-template-columns: repeat(2, 1fr);*/
+    /*gap: 20px;*/
 }
 
 .grid-item {
     background-color: var(--color-bg-3);
     padding: 20px;
     border: 3px solid var(--color-primary);
+    max-width: 600px;
 }
 
-.grid-item img {
-    width: 300px; /* Adjust the width as needed */
-    height: auto; /* Maintains the aspect ratio */
-}
+/*.grid-item img { */
+   /* width: 300px; */ /* Adjust the width as needed */
+   /* height: auto;*/ /* Maintains the aspect ratio */
+/*}*/
 
 /* Photography Slider */
 .photography {
