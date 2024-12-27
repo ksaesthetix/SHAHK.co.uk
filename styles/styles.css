@@ -182,10 +182,10 @@ nav {
     padding: 50px 20px;
     background-color: var(--color-bg-3);
     text-align: center;
-    position: relative;
+    /*position: relative;*/
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .grid-section h2 {
