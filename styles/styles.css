@@ -248,7 +248,7 @@ nav {
 }
 
 .photography-slide .grid-item img {
-    width: 300px;
+    width: 500px;
     height: auto;
     border-radius: 5px;
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
