@@ -259,7 +259,7 @@ nav {
 }
 
 .photography-slide .grid-item:hover img {
-    transform: scale(1.50); /* Slightly enlarge the image on hover */
+    transform: scale(1.30); /* Slightly enlarge the image on hover */
 }
 
 .photography-prev-btn, .photography-next-btn {
