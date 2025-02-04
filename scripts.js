@@ -134,3 +134,19 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     hamburger.classList.toggle('active');
 });
+
+// Email Sending Functionality
+function sendEmail() {
+    Email.send({
+        SecureToken: "YOUR_SECURE_TOKEN",
+        To: 'shahk.services@gmail.com',
+        From: "your-email@example.com",
+        Subject: "New Contact Form Submission",
+        Body: "Name: " + document.getElementById("name").value
+            + "<br> Email: " + document.getElementById("email").value
+            + "<br> Phone: " + document.getElementById("phone").value
+            + "<br> Message: " + document.getElementById("message").value
+    }).then(
+        message => alert(message)
+    );
+}    
