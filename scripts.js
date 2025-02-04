@@ -140,7 +140,7 @@ function sendEmail() {
     Email.send({
         SecureToken: "YOUR_SECURE_TOKEN",
         To: 'shahk.services@gmail.com',
-        From: "your-email@example.com",
+        From: "your-email@example.com", //change this once smtp set up
         Subject: "New Contact Form Submission",
         Body: "Name: " + document.getElementById("name").value
             + "<br> Email: " + document.getElementById("email").value
