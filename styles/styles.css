@@ -14,541 +14,392 @@
     --color-light: #EFEFEF;
     --color-light-variant: #A1B4C4;
 }
-
-* {
+*{
     margin: 0;
     padding: 0;
+    font-family: 'Overpass';
     box-sizing: border-box;
 }
-
-body {
-    font-family: 'Overpass', sans-serif;;
-    background-color: var(--color-bg-3);
-    color: var(--color-light);
+html{
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    overflow-y: auto;
+}
+body{
+    background: var(--color-bg-1);
+    color: var(--color-light);
 }
 
-header {
-    position: sticky;
-    top: 0;
-    background-color: var(--color-bg-1);
-    padding: 20px 0;
-    z-index: 1000;
+
+#header{
+    width: 100%;
+    height: 65vh;
+    /*background-image: url(/images/logos/logo_y&b.png);
+    background-size: cover;
+    background-position: center;*/
+}
+.container{
+    padding: 10px 10%;
 }
 
-nav {
+nav{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 10px;
-    height: 50px; /* Set a fixed height */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
 }
 
-.logo a {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--color-light);
-    text-decoration: none;
-}
-
-.logo img {
-    width: 150px;
-    height: auto;
-}
-
-.nav-links {
+nav ul li{
+    display: inline-block;
     list-style: none;
-    display: flex;
-    gap: 40px;
-    align-items: center; /* Ensure items are vertically aligned */
+    margin: 10px 20px;
 }
 
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
+nav ul li a{
+    color: var(--color-grey-1);
     text-decoration: none;
-    color: var(--color-light);
     font-size: 18px;
-    padding: 10px 15px;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflow text */
+    position: relative;
 }
 
-.nav-links a:hover {
-    background-color: var(--color-primary);
-    color: var(--color-bg-3);
-}
-
-/* Hamburger menu styling */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
+nav ul li a::after{
+    content: '';
+    width: 0;
     height: 3px;
-    background-color: var(--color-light);
-    margin: 4px 0;
-    transition: all 0.3s ease;
+    background: var(--color-accent-3);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
 }
-
-/* Rotate the hamburger icon when active */
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+nav ul li a:hover::after{
+    width: 100%;
 }
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
 }
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
 }
-
-.contact-btn {
-    background-color: var(--color-primary);
-    color: var(--color-bg-3); /* Updated text color */
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflow text */
-}
-
-.contact-btn:hover {
-    background-color: var(--color-primary-variant);
+.header-text h1 span {
     color: var(--color-accent-3);
 }
-
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: var(--color-bg-3);
+.dynamic-text {
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
 }
-
-.hero h1 {
-    font-size: 5rem;
+/* ------------- About --------------- */
+#about{
+    /*height: 65vh;*/
+    padding: 80px 0;
+    color: var(--color-light);
 }
-.hero p {
-    font-size: 2rem;
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--color-light);
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--color-accent-3);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.tab-contents ul li{
+    list-style: none;
     margin: 10px 0;
 }
-
-.hero .dynamic-text {
-    color: var(--color-primary);
+.tab-contents ul li span{
+    color: var(--color-accent-3);
+    font-size: 14px;
 }
-
-.buttons {
+/* ------------- Pricing --------------- */
+#pricing{
+    padding: 30px 0;
+    /*height: 65vh;*/
+}
+.pricing-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.pricing-list div{
+    background:var(--color-bg-2);
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.pricing-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.pricing-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15;
+}
+.pricing-list div a{
+    text-decoration: none;
+    color: var(--color-dark-1);
+    font-size: 20px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.pricing-list div:hover{
+    color: var(--color-dark-1);
+    background: var(--color-accent-3);
+    transform: translateY(-10);
+}
+/* ------------- Portfolio --------------- */
+#portfolio{
+    padding: 30px 0;
+    /*height: 65vh;*/
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),var(--color-grey-2));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: var(--color-accent-3);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: var(--color-bg-2);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid var(--color-accent-3);
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--color-bg-1);
+    background-color: var(--color-accent-3);
+    transition: background 0.5s;
+}
+.btn:hover{
+    background-color: var(--color-grey-2);
+    color: var(--color-light);
+    border: 1px solid var(--color-grey-2);
+}
+/* ------------- Contact --------------- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: var(--color-accent-3);
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;  
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: var(--color-light);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: var(--color-accent-3);
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: var(--color-accent-3);
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: var(--color-light);
+    padding: 15px;
+    margin: 15px 0;
+    color: var(--color-bg-2);
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: var(--color-bg-2);
+    font-weight: 300;
     margin-top: 20px;
 }
 
-.buttons p {
-    font-size: 1.2rem;
-    color: var(--color-text);
-    margin: 10px 0;
+/* ------------- CSS for Smaller Screen --------------- */
+nav .fas{
+    display: none;
 }
 
-.buttons button {
-    width: 150px; /* Adjust the width as needed */
-    padding: 10px 20px;
-    margin-right: 10px;
-    background-color: var(--color-primary);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.buttons button:hover {
-    background-color: var(--color-primary-variant);
-    color: var(--color-accent-3);
-}
-
-
-/* Photography and Coding Sections and About Me */
-.grid-section {
-    padding: 50px 20px;
-    background-color: var(--color-bg-3);
-    text-align: center;
-    position: relative;
-}
-
-.grid-section h2 {
-    margin-bottom: 20px; /* Adjust the value as needed */
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-}
-
-.grid-item {
-    background-color: var(--color-bg-3);
-    padding: 20px;
-    border: 3px solid var(--color-primary);
-}
-
-/*.grid-item img { */
-   /* width: 300px; */ /* Adjust the width as needed */
-   /* height: auto;*/ /* Maintains the aspect ratio */
-/*}*/
-
-/* Photography Slider */
-.photography {
-    padding: 50px 20px;
-    background-color: var(--color-bg-3);
-    text-align: center;
-    position: relative;
-}
-
-.photography h2 {
-    margin-bottom: 20px; /* Adjust the value as needed */
-}
-
-.photography-slider-container {
-    position: relative;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.photography-slider {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 100%;
-}
-
-.photography-slide {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    flex: 0 0 100%;
-    box-sizing: border-box;
-}
-
-.photography-slide .grid-item {
-    background-color: var(--color-bg-3);
-    padding: 20px;
-    border: 2px solid var(--color-primary);
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
-
-.photography-slide .grid-item img {
-    width: 300px;
-    height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.photography-slide .grid-item:hover {
-    background-color: var(--color-grey-2); /* Change to your desired hover background color */
-}
-
-.photography-slide .grid-item:hover img {
-    transform: scale(1.30); /* Slightly enlarge the image on hover */
-}
-
-.photography-prev-btn, .photography-next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--color-primary);
-    color: var(--color-dark-1);
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.photography-prev-btn {
-    left: 10px;
-}
-
-.photography-next-btn {
-    right: 10px;
-}
-
-
-/* Coding Slider */
-.coding {
-    padding: 50px 20px;
-    background-color: var(--color-bg-3);
-    text-align: center;
-    position: relative;
-}
-
-.coding h2 {
-    margin-bottom: 20px; /* Adjust the value as needed */
-}
-
-.coding-slider-container {
-    position: relative;
-    overflow:hidden;
-    max-width: 100%;
-}
-
-.coding-slider {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 100%;
-}
-
-.coding-slide {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    flex: 0 0 100%;
-    box-sizing: border-box;
-}
-
-.coding-slide .grid-item {
-    border: 1px solid var(--color-primary); /* Ensure border is set */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.coding-slide .grid-item:hover {
-    background-color: var(--color-grey-2); /* Change to your desired hover background color */
-    transform: scale(1.05); /* Slightly enlarge the container on hover */
-    border: 1px solid var(--color-primary); /* Maintain border on hover */
-}
-
-.coding-slide img {
-    width: 100px;
-    height: auto;
-    border-radius: 10px; /* Optional: adds rounded corners to the images */
-    margin-bottom: 10px; /* Space between the image and the title */
-}
-
-.coding-prev-btn, .coding-next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--color-primary);
-    color: var(--color-dark-1);
-    border: none;
-    border-radius: px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.coding-prev-btn {
-    left: 10px;
-}
-
-.coding-next-btn {
-    right: 10px;
-}
-
-
-/* Contact Form */
-.contact {
-    padding: 50px 20px;/* Reduced padding */
-    text-align: center;
-    background-color: var(--color-bg-3);
-    max-width: 600px; /* Set a max-width to make the form smaller */
-    margin: 0 auto; /* Center the form */
-}
-
-.contact h2 {
-    margin-bottom: 15px; /* Adjusted margin */
-}
-
-.contact form {
-    display: grid;
-    gap: 10px;
-}
-
-.contact input, .contact textarea {
-    padding: 10px;
-    border: 1px solid var(--color-primary);
-    border-radius: 5px;
-    background-color: var(--color-bg-1);
-    color: var(--color-light);
-    width: 100%;
-}
-
-.contact button {
-    padding: 10px 20px;
-    background-color: var(--color-primary);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    align-content: center;
-    width: 100%;
-}
-
-
-/* Footer */
-footer {
-    padding: 20px;
-    background-color: var(--color-dark-1);
-    text-align: center;
-    color: var(--color-light);
-}
-
-footer .footer-content {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-footer .footer-content div {
-    margin: 10px;
-}
-
-footer .footer-content ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer .footer-content ul li {
-    margin: 5px 0;
-}
-
-footer .social-media h4 {
-    margin-bottom: 15px; /* Adjust the value as needed */
-}
-
-footer .social-media ul {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-footer .social-media ul li {
-    margin: 0 10px;
-}
-
-footer .social-media ul li .icon {
-    color: var(--color-primary); /* Change to your desired color */
-    width: 24px; /* Adjust the size as needed */
-    height: 24px; /* Adjust the size as needed */
-}
-
-footer .social-media ul li .icon:hover {
-    color: var(--color-grey-2); /* Change to your desired hover color */
-}
-
-footer .explore, footer .resources {
-    text-align: left; /* Align text to the left */
-}
-
-footer .explore h4, footer .resources h4 {
-    margin-bottom: 10px; /* Space between the heading and the list */
-    color: var(--color-primary); /* Change to your desired heading color */
-}
-
-footer .explore ul, footer .resources ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer .explore ul li, footer .resources ul li {
-    margin: 5px 0;
-    color: var(--color-grey-1); /* Change to your desired text color */
-}
-
-footer .explore ul li .icon:hover,footer .resources ul li .icon:hover  {
-    color: var(--color-grey-2); /* Change to your desired hover color */
-}
-
-footer .footer-bottom {
-    border-top: 1px solid var(--color-primary);
-    padding-top: 10px;
-}
-
-footer .footer-bottom p {
-    margin: 0;
-}
-
-/* Mobile view */
-@media (max-width: 768px) {
-    body {
-        overflow-x: hidden;
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    #header{
+        background-image: url(images/logos/logo_y&b.png);
     }
-
-    .nav-links {
-        position: absolute;
-        right: 0;
-        height: 100vh;
+    .header-text{
+        margin-top: 45%;
+        font-size: 25px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: var(--color-bg-3);
+        position: fixed;
         top: 0;
-        background-color: var(--color-bg-2);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 300px;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
+        right: -200px;
+        width: 150px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
     }
-
-    .nav-links.active {
-        transform: translateX(0);
+    nav ul li{
+        display: block;
+        margin: 25px;
     }
-
-    .nav-links li {
-        margin: 20px 0;
-    }
-
-    .nav-links .contact-btn {
-        display: none; /* Hide the main nav contact button on small screens */
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .hamburger-menu {
-        display: flex;
-        flex-direction: column;
+    nav ul .fas{
         position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: var(--color-bg-1);
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
     }
-
-    .hamburger-menu a {
-        padding: 10px 15px;
-        text-decoration: none;
-        color: var(--color-light);
-        border-bottom: 1px solid var(--color-bg-2);
+    .sub-title{
+        font-size: 40px;
     }
-
-    .hamburger-menu a:hover {
-        background-color: var(--color-primary);
-        color: var(--color-bg-3);
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
     }
-
-    .hamburger-menu .contact-btn {
-        display: block; /* Ensure the hamburger menu contact button is shown */
-        border-bottom: none;
-        color: var(--color-bg-3); /* Updated text color */
+    .about-col-1{
+        margin-bottom: 30px;
     }
-
-    /* Additional rule to hide the main nav contact button on small screens */
-    .nav-links .contact-btn {
-        display: inline;
+    .about-col-2{
+        font-size: 14px;
     }
-
-    /* Ensure the hamburger menu contact button is shown */
-    .hamburger .contact-btn {
-        display: none;
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
     }
 }

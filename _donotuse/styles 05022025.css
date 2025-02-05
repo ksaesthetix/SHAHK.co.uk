@@ -1,0 +1,554 @@
+:root {
+    /* Define global CSS variables for colors */
+    --color-primary: #FDDA0D;
+    --color-primary-variant: #221F1F;
+    --color-bg-1: #191919;
+    --color-bg-2: #2C2C2C;
+    --color-bg-3: #333333;
+    --color-accent-1: #DD6BCD;
+    --color-accent-2: #67DAFA;
+    --color-accent-3: #FCE00A;
+    --color-grey-1: #E9EBEC;
+    --color-grey-2: #706F6F;
+    --color-dark-1: #0E0E0E;
+    --color-light: #EFEFEF;
+    --color-light-variant: #A1B4C4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;;
+    background-color: var(--color-bg-3);
+    color: var(--color-light);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg-1);
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    height: 50px; /* Set a fixed height */
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-light);
+    text-decoration: none;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    align-items: center; /* Ensure items are vertically aligned */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-light);
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+}
+
+.nav-links a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-bg-3);
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-light);
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Rotate the hamburger icon when active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.contact-btn {
+    background-color: var(--color-primary);
+    color: var(--color-bg-3); /* Updated text color */
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+}
+
+.contact-btn:hover {
+    background-color: var(--color-primary-variant);
+    color: var(--color-accent-3);
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: var(--color-bg-3);
+}
+
+.hero h1 {
+    font-size: 5rem;
+}
+.hero p {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.hero .dynamic-text {
+    color: var(--color-primary);
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons p {
+    font-size: 1.2rem;
+    color: var(--color-text);
+    margin: 10px 0;
+}
+
+.buttons button {
+    width: 150px; /* Adjust the width as needed */
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: var(--color-primary-variant);
+    color: var(--color-accent-3);
+}
+
+
+/* Photography and Coding Sections and About Me */
+.grid-section {
+    padding: 50px 20px;
+    background-color: var(--color-bg-3);
+    text-align: center;
+    position: relative;
+}
+
+.grid-section h2 {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: var(--color-bg-3);
+    padding: 20px;
+    border: 3px solid var(--color-primary);
+}
+
+/*.grid-item img { */
+   /* width: 300px; */ /* Adjust the width as needed */
+   /* height: auto;*/ /* Maintains the aspect ratio */
+/*}*/
+
+/* Photography Slider */
+.photography {
+    padding: 50px 20px;
+    background-color: var(--color-bg-3);
+    text-align: center;
+    position: relative;
+}
+
+.photography h2 {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+.photography-slider-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.photography-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.photography-slide {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.photography-slide .grid-item {
+    background-color: var(--color-bg-3);
+    padding: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.photography-slide .grid-item img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.photography-slide .grid-item:hover {
+    background-color: var(--color-grey-2); /* Change to your desired hover background color */
+}
+
+.photography-slide .grid-item:hover img {
+    transform: scale(1.30); /* Slightly enlarge the image on hover */
+}
+
+.photography-prev-btn, .photography-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color-primary);
+    color: var(--color-dark-1);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.photography-prev-btn {
+    left: 10px;
+}
+
+.photography-next-btn {
+    right: 10px;
+}
+
+
+/* Coding Slider */
+.coding {
+    padding: 50px 20px;
+    background-color: var(--color-bg-3);
+    text-align: center;
+    position: relative;
+}
+
+.coding h2 {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+.coding-slider-container {
+    position: relative;
+    overflow:hidden;
+    max-width: 100%;
+}
+
+.coding-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.coding-slide {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.coding-slide .grid-item {
+    border: 1px solid var(--color-primary); /* Ensure border is set */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.coding-slide .grid-item:hover {
+    background-color: var(--color-grey-2); /* Change to your desired hover background color */
+    transform: scale(1.05); /* Slightly enlarge the container on hover */
+    border: 1px solid var(--color-primary); /* Maintain border on hover */
+}
+
+.coding-slide img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px; /* Optional: adds rounded corners to the images */
+    margin-bottom: 10px; /* Space between the image and the title */
+}
+
+.coding-prev-btn, .coding-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color-primary);
+    color: var(--color-dark-1);
+    border: none;
+    border-radius: px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.coding-prev-btn {
+    left: 10px;
+}
+
+.coding-next-btn {
+    right: 10px;
+}
+
+
+/* Contact Form */
+.contact {
+    padding: 50px 20px;/* Reduced padding */
+    text-align: center;
+    background-color: var(--color-bg-3);
+    max-width: 600px; /* Set a max-width to make the form smaller */
+    margin: 0 auto; /* Center the form */
+}
+
+.contact h2 {
+    margin-bottom: 15px; /* Adjusted margin */
+}
+
+.contact form {
+    display: grid;
+    gap: 10px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    background-color: var(--color-bg-1);
+    color: var(--color-light);
+    width: 100%;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-content: center;
+    width: 100%;
+}
+
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: var(--color-dark-1);
+    text-align: center;
+    color: var(--color-light);
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+footer .footer-content div {
+    margin: 10px;
+}
+
+footer .footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-content ul li {
+    margin: 5px 0;
+}
+
+footer .social-media h4 {
+    margin-bottom: 15px; /* Adjust the value as needed */
+}
+
+footer .social-media ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+footer .social-media ul li {
+    margin: 0 10px;
+}
+
+footer .social-media ul li .icon {
+    color: var(--color-primary); /* Change to your desired color */
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Adjust the size as needed */
+}
+
+footer .social-media ul li .icon:hover {
+    color: var(--color-grey-2); /* Change to your desired hover color */
+}
+
+footer .explore, footer .resources {
+    text-align: left; /* Align text to the left */
+}
+
+footer .explore h4, footer .resources h4 {
+    margin-bottom: 10px; /* Space between the heading and the list */
+    color: var(--color-primary); /* Change to your desired heading color */
+}
+
+footer .explore ul, footer .resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .explore ul li, footer .resources ul li {
+    margin: 5px 0;
+    color: var(--color-grey-1); /* Change to your desired text color */
+}
+
+footer .explore ul li .icon:hover,footer .resources ul li .icon:hover  {
+    color: var(--color-grey-2); /* Change to your desired hover color */
+}
+
+footer .footer-bottom {
+    border-top: 1px solid var(--color-primary);
+    padding-top: 10px;
+}
+
+footer .footer-bottom p {
+    margin: 0;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: var(--color-bg-2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 300px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links .contact-btn {
+        display: none; /* Hide the main nav contact button on small screens */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: var(--color-bg-1);
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .hamburger-menu a {
+        padding: 10px 15px;
+        text-decoration: none;
+        color: var(--color-light);
+        border-bottom: 1px solid var(--color-bg-2);
+    }
+
+    .hamburger-menu a:hover {
+        background-color: var(--color-primary);
+        color: var(--color-bg-3);
+    }
+
+    .hamburger-menu .contact-btn {
+        display: block; /* Ensure the hamburger menu contact button is shown */
+        border-bottom: none;
+        color: var(--color-bg-3); /* Updated text color */
+    }
+
+    /* Additional rule to hide the main nav contact button on small screens */
+    .nav-links .contact-btn {
+        display: inline;
+    }
+
+    /* Ensure the hamburger menu contact button is shown */
+    .hamburger .contact-btn {
+        display: none;
+    }
+}

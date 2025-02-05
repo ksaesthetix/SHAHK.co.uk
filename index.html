@@ -1,242 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kieran Shah - Portfolio</title>
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="styles/styles.css">
-    <!-- JavaScript for the Sliders -->
-    <script src="scripts.js" defer></script>
-    <!-- Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSP23JV7YP"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-LSP23JV7YP');
-    </script>
-</head>
-<body></body>
-
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="https://shahk.co.uk/"><img src="/images/logos/logo_lighterY.png" alt="Logo"></a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico">
+        <link href='https://fonts.googleapis.com/css?family=Overpass' rel='stylesheet'>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script src="scripts.js" defer></script> 
+        <title>SHAHK.co.uk</title>
+    </head>
+    <body>
+<!---------------------------Header -------------------------------->           
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img href="https://shahk.co.uk/" src="images/logos/logo_lighterY.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Welcome to <span>SHAHK</span></h1>
+                <p>We are <span class="dynamic-text"></span></p>   
             </div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#grid-section">About Us</a></li>
-                <li><a href="#photography">Photography</a></li>
-                <li><a href="#coding">Coding</a></li>
-                <li><button href="#contact" class="contact-btn">Contact Us</button></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <button href="#contact" class="contact-btn">Contact Us</button>
-            </div>
-        </nav>
-    </header>
-
-
-    <section id="hero" class="hero">
-        <h1>Welcome to SHAHK</h1>
-        <p>We are <span class="dynamic-text"></span></p>
-        <div class="buttons">
-            <p>Click to hire us:</p>
-            <button>Photography</button>
-            <button>Coding</button>
         </div>
-    </section>
-
-    <section class="grid-section">
-        <h2>About Us</h2>
-        <div class="grid">
-            <div class="grid-item">
-                <!-- <h3>Title</h3> -->
-                <p>Welcome to SHAHK, where creativity meets technology! We are a dynamic company specializing in photography, coding, web development, and business advice. Our mission is to bring your vision to life through stunning visuals, innovative tech solutions, and strategic business insights. </p>
-                <p>&nbsp;</p>
-                    <ul>
-                    <li><strong>Photography:</strong> Capturing moments that matter, our photography services range from personal portraits to corporate events. We believe every picture tells a story, and we are here to help you tell yours.</li>
-                    <p>&nbsp;</p>
-                    <li><strong>Coding & Web Development:</strong> In the digital age, a strong online presence is crucial. Our team of skilled developers and coders are dedicated to creating websites and applications that are not only visually appealing but also highly functional and user-friendly.</li>
-                    <p>&nbsp;</p>
-                    <li><strong>Business Advice:</strong> Navigating the business world can be challenging. That's why we offer expert advice to help you make informed decisions, streamline operations, and achieve your business goals.</li>
-                    <p>&nbsp;</p>
-                    </ul>
-                    <p>&nbsp;</p>
-                    <p>At SHAHK, we are passionate about what we do and committed to delivering excellence in every project. Let's work together to create something amazing!</p>
-            </div>
-            <!--<div class="grid-item">
-                <img src="images/logos/logo_lighterY.png" alt="SHAHK About us Logo">
-            </div>-->
-        </div>
-    </section>
-
-    <!-- Photography Slider Section -->
-    <section id="photography" class="photography">
-        <h2>Photography</h2>
-        <p>&nbsp;</p>
-        <p>Please see a small collection of photos I have taken over the last couple of years.</p>
-        <p>&nbsp;</p>
-        <div class="photography-slider-container">
-            <div class="photography-slider">
-                <div class="photography-slide">
-                    <div class="grid-item">
-                        <img src="images/photography/sport1.jpeg" alt="Description of image 1">
-                        <h3>Sports Photography</h3>
-                    </div>
-                    <div class="grid-item">
-                        <img src="images/photography/street1.jpeg" alt="Description of image 2">
-                        <h3>Street Photography</h3>
-                    </div>
-                    <div class="grid-item">
-                        <img src="images/photography/portrait1.jpeg" alt="Description of image 3">
-                        <h3>Portrait Photography</h3>
-                    </div>
-                    <div class="grid-item">
-                        <img src="images/photography/sport2.jpeg" alt="Description of image 4">
-                        <h3>Sports Photography</h3>
-                    </div>
-                </div>
-                <div class="photography-slide">
-                    <div class="grid-item">
-                        <img src="images/photography/street2.jpeg" alt="Description of image 5">
-                        <h3>Street Photography</h3>
-                    </div>
-                    <div class="grid-item">
-                        <img src="images/photography/street_animal1.jpeg" alt="Description of image 6">
-                        <h3>Street/Wildlife Photography</h3>
-                    </div>
-                    <div class="grid-item">
-                        <img src="images/photography/sport1.jpeg" alt="Description of image 7">
-                        <h3>Sport Photography</h3>
-                    </div>
-                    <div class="grid-item">
-                        <img src="images/photography/street3.jpeg" alt="Description of image 8">
-                        <h3>Street Photography</h3>
-                    </div>
-                </div>
-            </div>
-            <button class="photography-prev-btn">❮</button>
-            <button class="photography-next-btn">❯</button>
-        </div>
-    </section>
-
-
-<!-- Coding Slider Section -->
-<section id="coding" class="coding">
-    <h2>Coding</h2>
-    <div class="coding-slider-container">
-        <div class="coding-slider">
-            <div class="coding-slide">
-                <div class="grid-item">
-                    <img src="images/logos/logo_lighterY.png" alt="Image for Title 1">
-                    <h3>SHAHK App</h3>
-                    <p>&nbsp;</p>
-                    <p>Developed a react / Expo app for SHAHK to help streamline customer access and the portfolio</p>
-                </div>
-               <!-- <div class="grid-item">
-                    <img src="images/header2.JPG" alt="Image for Title 2">
-                    <h3>Title 2</h3>
-                    <p>&nbsp;</p>
-                    <p>Body text for coding project 2.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="images/header.JPG" alt="Image for Title 3">
-                    <h3>Title 3</h3>
-                    <p>&nbsp;</p>
-                    <p>Body text for coding project 3.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="images/header2.JPG" alt="Image for Title 4">
-                    <h3>Title 4</h3>
-                    <p>&nbsp;</p>
-                    <p>Body text for coding project 4.</p>
-                </div>
-            </div>
-            <div class="coding-slide">
-                <div class="grid-item">
-                    <img src="images/header.JPG" alt="Image for Title 5">
-                    <h3>Title 5</h3>
-                    <p>&nbsp;</p>
-                    <p>Body text for coding project 5.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="images/header2.JPG" alt="Image for Title 6">
-                    <h3>Title 6</h3>
-                    <p>&nbsp;</p>
-                    <p>Body text for coding project 6.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="images/header.JPG" alt="Image for Title 7">
-                    <h3>Title 7</h3>
-                    <p>&nbsp;</p>
-                    <p>Body text for coding project 7.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="images/header2.JPG" alt="Image for Title 8">
-                    <h3>Title 8</h3>
-                    <p>&nbsp;</p>
-                    <p>Body text for coding project 8.</p>
-                </div>
-            </div> -->
-        </div>
-        <button class="coding-prev-btn">❮</button>
-        <button class="coding-next-btn">❯</button>
     </div>
-</section>
-
-
-
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form onsubmit="sendEmail(); return false;">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="text" placeholder="Phone Number" required>
-            <textarea placeholder="Message"  required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <!-- Existing content -->
-            <div class="social-media">
-                <h4>Follow Us</h4>
-                <ul>
-                    <li><a href="#"><i data-feather="facebook" class="icon"></i></a></li>
-                    <li><a href="https://github.com/ksaesthetix"><i data-feather="github" class="icon"></i></a></li>
-                    <li><a href="https://www.instagram.com/shahk.co.uk?igsh=MWNtdGQ3d3k2dGYycg=="><i data-feather="instagram" class="icon"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/kieran-shah-91205a149/"><i data-feather="linkedin" class="icon"></i></a></li>
-                </ul>
-            </div>
-            <div class="explore">
-                <h4>Explore</h4>
-                <ul>
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">Photography</a></li>
-                    <li><a href="#">Development</a></li>
-                </ul>
-            </div>
-            <div class="resources">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Best Practices</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
+<!---------------------------About Section-------------------------------->        
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/logos/logo_lighterY.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Us</h1>
+                    <p>Where creativity meets technology! We are a dynamic company specializing in photography, coding, web development, and business advice. Our mission is to bring your vision to life through stunning visuals, innovative tech solutions, and strategic business insights</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('languages')">Languages</p>
+                        <p class="tab-links" onclick="opentab('photography')">Photography</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Application Development</span><br>We can Develop applications using Python, Javscript, React</li>
+                            <li><span>Web Development</span><br>We can design web/interfaces using HTML, Javascript and CSS</li>
+                            <li><span>Photography</span><br>We also offer lifestyle, portrait, business photography</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents"id="languages">
+                        <ul>
+                            <li><span>Python</span><br> +5 years experience</li>
+                            <li><span>JavaScript</span><br> +3 years experience</li>
+                            <li><span>HTML & CSS</span><br> +7 years experience</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="photography">
+                        <ul>
+                            <li><span>Portrait / Lifestyle</span><br>We can provide high quality portrait and lifestyle photoshoots</li>
+                            <li><span>Event</span><br>We can cover all your events photography needs - i.e.Weddings, Birthdays, Proposals</li>
+                            <li><span>Sports</span><br>We are able to capture your best sporting moments</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>©SHAHK 2025.</p>
+    </div>
+<!---------------------------Pricing----------------------------------->
+    <div id="pricing">
+        <div class="container">
+            <h1 class="sub-title">Pricing</h1>
+            <div class="pricing-list">
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Development</h2>
+                    <p>£200 - £500 per day</p>
+                    <a href="#contact">Hire Me</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Web Development</h2>
+                    <p>£150 per day</p>
+                    <a href="#contact">Hire Me</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-camera"></i>
+                    <h2>Photography</h2>
+                    <p>£50 - £300 per day</p>
+                    <a href="#contact">Hire Me</a>
+                </div>
+            </div>
         </div>
-    </footer>
-</body>
+    </div>
+<!---------------------------Portfolio--------------------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Our Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/logos/logo_lighterY.png">
+                <div class="layer">
+                    <h3>SHAHK App</h3>
+                    <p>Created an App for SHAHK.co.uk - Still to be published to app stores</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/photography/sport1.jpeg">
+                <div class="layer">
+                    <h3>Sports Photography</h3>
+                    <p>Taken photos of local athletics competitions/training groups.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/photography/portrait1.jpeg">
+                <div class="layer">
+                    <h3>Portrait Photography</h3>
+                    <p>Taken portrait/lifestyle photos of an athletics training group</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>        
+<!---------------------------Contact Us-------------------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Us</h1>
+                    <p><i class="fas fa-paper-plane"></i> shahk.services@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>01234540219</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/shahk.co.uk?igsh=MWNtdGQ3d3k2dGYycg=="><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/kieran-shah-91205a149/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/ksaesthetix"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form id="contact-form">
+                        <input type="text" name="Name" placeholder="Enter Your Name" required>
+                        <input type="email" name="email" placeholder="Enter Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 SHAHK. All Rights Reserved.</p>
+        </div>
+    </div>       
+    </body>
 </html>
