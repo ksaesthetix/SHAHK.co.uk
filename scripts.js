@@ -88,3 +88,30 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             alert('Failed to send message: ' + JSON.stringify(error));
         });
 });
+
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 0) {
+        scrollToTopBtn.classList.add('show');
+    } else {
+        scrollToTopBtn.classList.remove('show');
+    }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+        img.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            alert('Right-click is disabled on images.');
+        });
+    });
+});
