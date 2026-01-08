@@ -1,81 +1,17 @@
-// Feather Icons Initialization
-document.addEventListener('DOMContentLoaded', () => {
-    feather.replace();
-});
+// Tab functionality
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
 
-// Photography Slider
-const photoSlider = document.querySelector('.photography-slider');
-const photoSlides = document.querySelectorAll('.photography-slide');
-const photoPrevBtn = document.querySelector('.photography-prev-btn');
-const photoNextBtn = document.querySelector('.photography-next-btn');
-
-let photoIndex = 0;
-
-// Disable the previous button on the first slide for photography
-photoPrevBtn.disabled = true;
-
-photoNextBtn.addEventListener('click', () => {
-    photoIndex++;
-    updatePhotoSlider();
-});
-
-photoPrevBtn.addEventListener('click', () => {
-    photoIndex--;
-    updatePhotoSlider();
-});
-
-function updatePhotoSlider() {
-    if (photoIndex === 0) {
-        photoPrevBtn.disabled = true;
-    } else {
-        photoPrevBtn.disabled = false;
+function opentab(tabname) {
+    for (var tablink of tablinks) {
+        tablink.classList.remove("active-link");
     }
-
-    if (photoIndex === photoSlides.length - 1) {
-        photoNextBtn.disabled = true;
-    } else {
-        photoNextBtn.disabled = false;
+    for (var tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
     }
-
-    photoSlider.style.transform = `translateX(-${photoIndex * 100}%)`;
-}
-
-// Coding Slider
-const codingSlider = document.querySelector('.coding-slider');
-const codingSlides = document.querySelectorAll('.coding-slide');
-const codingPrevBtn = document.querySelector('.coding-prev-btn');
-const codingNextBtn = document.querySelector('.coding-next-btn');
-
-let codingIndex = 0;
-
-// Disable the previous button on the first slide for coding
-codingPrevBtn.disabled = true;
-
-codingNextBtn.addEventListener('click', () => {
-    codingIndex++;
-    updateCodingSlider();
-});
-
-codingPrevBtn.addEventListener('click', () => {
-    codingIndex--;
-    updateCodingSlider();
-});
-
-function updateCodingSlider() {
-    if (codingIndex === 0) {
-        codingPrevBtn.disabled = true;
-    } else {
-        codingPrevBtn.disabled = false;
-    }
-
-    if (codingIndex === codingSlides.length - 1) {
-        codingNextBtn.disabled = true;
-    } else {
-        codingNextBtn.disabled = false;
-    }
-
-    codingSlider.style.transform = `translateX(-${codingIndex * 100}%)`;
-}
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+};
 
 // Typing Effect
 const words = ["Web Developers", "Photographers", "Designers", "Programmers", "Business Specialists"];
@@ -126,11 +62,56 @@ function typeWord() {
 document.addEventListener('DOMContentLoaded', () => {
     typeWord();
 });
-// Hamburger Menu Toggle
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
+// Side menu functionality
+var sidemenu = document.getElementById("sidemenu")
+function openmenu() {
+    sidemenu.style.right = "0"
+}
+function closemenu() {
+    sidemenu.style.right = "-200px"
+}
+
+// Initialize EmailJS
+(function() {
+    emailjs.init("-itQQSXFb6ZbnzoxB"); // Replace with your EmailJS user ID
+})();
+
+// Handle form submission
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_ztm1cgg', 'template_su78pea', this)
+        .then(function() {
+            alert('Message sent successfully!');
+        }, function(error) {
+            alert('Failed to send message: ' + JSON.stringify(error));
+        });
+});
+
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 0) {
+        scrollToTopBtn.classList.add('show');
+    } else {
+        scrollToTopBtn.classList.remove('show');
+    }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+        img.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            alert('Right-click is disabled on images.');
+        });
+    });
 });
