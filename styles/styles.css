@@ -60,6 +60,7 @@ nav ul li{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
+    position: relative;
 }
 
 nav ul li a{
@@ -81,6 +82,49 @@ nav ul li a::after{
 }
 nav ul li a:hover::after{
     width: 100%;
+}
+.nav-dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-bg-1);
+    min-width: 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    padding: 8px 0;
+    display: none;
+    z-index: 999;
+}
+
+nav ul li:hover > .nav-dropdown{
+    display: block;
+}
+
+.nav-dropdown li{
+    list-style: none;
+}
+
+.nav-dropdown li a{
+    display: block;
+    padding: 10px 18px;
+    color: var(--color-grey-1);
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-dropdown li a:hover{
+    background: rgba(255,255,255,0.03);
+    color: var(--color-accent-3);
+}
+
+/* Mobile: make dropdown flow with document */
+@media (max-width: 768px){
+    .nav-dropdown{
+        position: static;
+        box-shadow: none;
+        padding-left: 10px;
+    }
 }
 .header-text{
     margin-top: 20%;
@@ -549,7 +593,7 @@ form .btn2:hover{
 }
 
 .project-card {
-    background: var(--color-light);
+    background: var(--color-bg-2);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -565,11 +609,11 @@ form .btn2:hover{
 .project-image {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--color-bg-3);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--color-light);
     font-size: 3rem;
 }
 
@@ -580,13 +624,13 @@ form .btn2:hover{
 .project-title {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: var(--color-light);
 }
 
 .project-type {
     display: inline-block;
-    background: #667eea;
-    color: white;
+    background: var(--color-bg-1);
+    color: var(--color-light);
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
     font-size: 0.8rem;
@@ -594,7 +638,7 @@ form .btn2:hover{
 }
 
 .project-description {
-    color: #666;
+    color: var(--color-grey-2);
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -606,8 +650,8 @@ form .btn2:hover{
 }
 
 .tag {
-    background: #f0f0f0;
-    color: #667eea;
+    background: var(--color-bg-1);
+    color: var(--color-accent-3);
     padding: 0.3rem 0.8rem;
     border-radius: 5px;
     font-size: 0.75rem;
