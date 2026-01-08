@@ -281,6 +281,121 @@ nav ul li a:hover::after{
     color: var(--color-light);
     border: 1px solid var(--color-grey-2);
 }
+
+/* ------------- Testimonials --------------- */
+.testimonial {
+  padding: 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.testimonial__swiper {
+  padding-bottom: 6rem;
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.testimonial__title h2{
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 40px;
+}
+
+.testimonial__card {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  background-color: var(--color-bg-2);
+  padding: 2.5rem 2rem 3rem;
+  border-radius: 2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.testimonial__img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--color-accent-3);
+  margin: 0 auto 1rem;
+}
+
+.testimonial__name {
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-light);
+  text-transform: none;
+  word-wrap: break-word;
+}
+
+.testimonial__rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  margin-bottom: .75rem;
+}
+
+.testimonial__stars {
+  display: flex;
+  align-items: center;
+  column-gap: .25rem;
+}
+
+.testimonial__stars i {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+
+.testimonial__number {
+  font-size: 20px;
+  text-transform: none;
+}
+
+.testimonial__card p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--color-light);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.testimonial .swiper-pagination-bullets {
+  bottom: 1rem;
+}
+
+.testimonial .swiper-pagination-bullet {
+  background-color: var(--color-accent-3);
+  transition: opacity .4s;
+}
+
+.testimonial .swiper-button-prev {
+  left: calc(50% - 6rem);
+}
+
+.testimonial .swiper-button-next {
+  right: calc(50% - 6rem);
+}
+
+.testimonial .swiper-button-prev::after, 
+.testimonial .swiper-button-next::after {
+  content: "";
+}
+
+.testimonial :is(.swiper-button-prev, .swiper-button-next) {
+  top: initial;
+  bottom: 4rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--color-accent-3);
+  color: var(--color-light);
+  border-radius: 50%;
+}
 /* ------------- Contact --------------- */
 .contact-left{
     flex-basis: 35%;
@@ -392,6 +507,114 @@ form .btn2:hover{
 .scrollToTopBtn i {
     margin-right: 8px;
     font-size: 24px;
+}
+/* ------------- Development Page CSS  --------------- */
+.dev-title{
+    text-align: center;
+    margin: 40px 0;
+    color: var(--color-primary);
+}
+
+.filter-buttons {
+            text-align: center;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+.filter-btn {
+    padding: 0.7rem 1.5rem;
+    border: 2px solid var(--color-light);
+    background: transparent;
+    color: var(--color-light);
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--color-bg-3);
+    color: var(--color-primary);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.project-card {
+    background: var(--color-light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.project-type {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: #f0f0f0;
+    color: #667eea;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.75rem;
+}
+
+.hidden {
+    display: none;
 }
 /* ------------- CSS for Smaller Screen --------------- */
 nav .fas{

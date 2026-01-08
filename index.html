@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico">
         <link href='https://fonts.googleapis.com/css?family=Overpass' rel='stylesheet'>
-        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
+        <link rel="stylesheet" href="./styles/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script src="scripts.js" defer></script> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSP23JV7YP"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
@@ -32,6 +32,7 @@
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
@@ -117,9 +118,9 @@
             <div class="work">
                 <img src="images/logos/logo_lighterY.png">
                 <div class="layer">
-                    <h3>SHAHK App</h3>
+                    <h3>Web and App Dev</h3>
                     <p>Created an App for SHAHK.co.uk - Still to be published to app stores</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="./assets/pages/development.html"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -141,7 +142,28 @@
         </div>
         <a href="#" class="btn">See More</a>
     </div>
-</div>        
+</div>
+<!----------------------------Testimonials----------------------------->
+    <div id="testimonials">
+        <div class="container">
+            <h1 class="sub-title">TESTIMONIALS</h1>
+        </br>
+            <div class="testimonial__swiper container swiper">
+                <div id="testimonial-wrapper" class="swiper-wrapper">
+                <!-- slides injected by JS -->
+                </div>
+
+                <!-- Pagination bullets -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>      
+    </div>
+
+</br>
 <!---------------------------Contact Us-------------------------------->
     <div id="contact">
         <div class="container">
@@ -171,6 +193,10 @@
             <p>© 2025 SHAHK. All Rights Reserved.</p>
         </div>
     </div>
-    <button id="scrollToTopBtn" class="scrollToTopBtn"><i class="fas fa-arrow-up"></i>Scroll to Top</button>       
+    <button id="scrollToTopBtn" class="scrollToTopBtn"><i class="fas fa-arrow-up"></i>Scroll to Top</button>
+<!-------------------------Scripts------------------------------------>    
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="./js/scripts.js" defer></script>        
     </body>
 </html>

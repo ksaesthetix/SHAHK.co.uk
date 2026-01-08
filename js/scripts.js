@@ -115,3 +115,83 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+  /* ============================
+   3. Testimonials Section (FIXED)
+   ============================ */
+  async function loadTestimonials() {
+    try {
+      const response = await fetch('assets/testimonials.json');
+      if (!response.ok) throw new Error('Failed to load testimonials.json');
+      const testimonials = await response.json();
+
+      const wrapper = document.getElementById('testimonial-wrapper');
+      wrapper.innerHTML = ''; // Clear wrapper before adding slides
+
+      testimonials.forEach(item => {
+        const slide = document.createElement('article');
+        slide.classList.add('testimonial__card', 'swiper-slide');
+
+        // Resolve image path relative to current HTML page
+        const imgSrc = new URL(item.photo, window.location.href).href;
+
+        slide.innerHTML = `
+          <img src="${imgSrc}" alt="${item.author}" class="testimonial__img" onerror="this.onerror=null;this.src='images/logos/logo_lighterY.png';">
+          <h3 class="testimonial__name">${item.author}</h3>
+          <p class="testimonial__description">
+            ${item.text}
+          </p>
+        `;
+
+        wrapper.appendChild(slide);
+      });
+
+      initSwiper();
+    } catch (error) {
+      console.error('Error loading testimonials:', error);
+    }
+  }
+
+  function initSwiper() {
+    new Swiper('.testimonial__swiper', {
+      loop: true,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      spaceBetween: 16,
+      grabCursor: true,
+      speed: 600,
+
+      effect: 'coverflow',
+      coverflowEffect: {
+        rotate: -90,
+        depth: 600,
+        modifier: 0.5,
+        slideShadows: false,
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  }
+
+  // Load testimonials on page load
+  loadTestimonials();
+
+
+  // Debug: peek at raw file content for quick troubleshooting
+  fetch('./assets/testimonials.json')
+    .then((res) => res.text())
+    .then((text) => console.log('RAW RESPONSE (first 300 chars):', text.substring(0, 300)))
+    .catch(() => console.log('RAW RESPONSE: not available'));
