@@ -660,6 +660,95 @@ form .btn2:hover{
 .hidden {
     display: none;
 }
+
+/* ------------- Privacy Policy Page CSS  --------------- */
+.privacy-policy .policy-card {
+    background: var(--color-bg-2);
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.privacy-policy h1 {
+    font-size: 42px;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--color-accent-3);
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.privacy-policy h2 {
+    font-size: 28px;
+    color: var(--color-accent-3);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.privacy-policy h3 {
+    font-size: 20px;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.privacy-policy p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-light);
+    margin-bottom: 20px;
+}
+
+.privacy-policy ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.privacy-policy ul li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    font-size: 16px;
+}
+
+.privacy-policy ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent-3);
+    font-size: 18px;
+    line-height: 1;
+}
+
+.privacy-policy a {
+    color: var(--color-accent-3);
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.privacy-policy a:hover {
+    color: var(--color-accent-1);
+}
+
+.policy-section {
+    margin-bottom: 30px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    .privacy-policy .policy-card {
+        padding: 30px 20px;
+        margin: 30px 10px;
+    }
+    .privacy-policy h1 {
+        font-size: 32px;
+    }
+    .privacy-policy h2 {
+        font-size: 24px;
+    }
+}
 /* ------------- CSS for Smaller Screen --------------- */
 nav .fas{
     display: none;
